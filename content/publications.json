@@ -1,0 +1,14 @@
+[
+  {
+    "category": "digital-human",
+    "year": "2025",
+    "venue": "arXiv",
+    "title": "MIO: Towards Interactive Intelligence for Digital Humans",
+    "authors": "Yiyi Cai, Xuangeng Chu, Xiwei Gao, Sitong Gong, Yifei Huang, Caixin Kang, Kunhang Li, Ruicong Liu, Haiyang Liu, Yun Liu, Dianwen Ng, Zixiong Su, Erwin Wu, Yuhan Wu, Tianyu Wu, Dingkun Yan, Chang Zeng, Bo Zheng, You Zhou",
+    "links": [
+      { "label": "PDF", "url": "https://arxiv.org/abs/2507.13344", "icon": "fas fa-file-pdf" },
+      { "label": "Code", "url": "https://github.com/", "icon": "fab fa-github" },
+      { "label": "Project", "url": "index_project.html", "icon": "fas fa-globe" }
+    ]
+  }
+]

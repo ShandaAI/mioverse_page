@@ -1,21 +1,355 @@
-window.HELP_IMPROVE_VIDEOJS = false;
+/*  ============================================
+    Shanda AI Research Tokyo — Content Loader
+    ============================================
+    All editable content lives in /content/*.json and /content/*.md.
+    This script fetches those files and renders them into the page.
+*/
 
+const CONTENT_BASE = "content";
 
-$(document).ready(function() {
-    // Check for click events on the navbar burger icon
+// ---- Helpers ---- //
 
-    var options = {
-			slidesToScroll: 1,
-			slidesToShow: 1,
-			loop: true,
-			infinite: true,
-			autoplay: true,
-			autoplaySpeed: 5000,
-    }
+function fetchJSON(path) {
+  return fetch(`${CONTENT_BASE}/${path}`).then((r) => r.json());
+}
 
-		// Initialize all div with carousel class
-    var carousels = bulmaCarousel.attach('.carousel', options);
-	
-    bulmaSlider.attach();
+function fetchText(path) {
+  return fetch(`${CONTENT_BASE}/${path}`).then((r) => r.text());
+}
 
-})
+function md(text) {
+  if (typeof marked !== "undefined") {
+    return marked.parse(text);
+  }
+  return text
+    .split(/\n\n+/)
+    .map((p) => `<p>${p.replace(/\n/g, " ")}</p>`)
+    .join("");
+}
+
+function escapeHtml(str) {
+  const div = document.createElement("div");
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// ---- Shared: Category Tabs ---- //
+
+function renderTabs(containerId, categories, activeId, onSelect) {
+  const html =
+    `<button class="research-tab ${activeId === "all" ? "is-active" : ""}" data-cat="all">All</button>` +
+    categories
+      .map(
+        (c) =>
+          `<button class="research-tab ${activeId === c.id ? "is-active" : ""}" data-cat="${c.id}">
+            <i class="${c.icon}"></i> ${escapeHtml(c.label)}
+          </button>`
+      )
+      .join("");
+
+  const container = document.getElementById(containerId);
+  container.innerHTML = html;
+  container.querySelectorAll(".research-tab").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      container.querySelectorAll(".research-tab").forEach((b) => b.classList.remove("is-active"));
+      this.classList.add("is-active");
+      onSelect(this.dataset.cat);
+    });
+  });
+}
+
+// ---- Render Functions ---- //
+
+function renderAbout(markdown) {
+  document.getElementById("about-content").innerHTML = md(markdown);
+}
+
+function renderNews(items) {
+  const badgeClass = {
+    paper: "badge-paper",
+    release: "badge-release",
+    lab: "badge-announcement",
+    announcement: "badge-announcement",
+  };
+
+  const html = items
+    .map(
+      (item) => `
+    <div class="news-item">
+      <span class="news-date">${escapeHtml(item.date)}</span>
+      <span class="news-badge ${badgeClass[item.badge] || "badge-announcement"}">${escapeHtml(item.badge)}</span>
+      <span class="news-text">${item.text}</span>
+    </div>`
+    )
+    .join("");
+
+  document.getElementById("news-list").innerHTML = html;
+}
+
+// ---- Projects (with category filter) ---- //
+
+let _allProjects = [];
+let _categories = [];
+
+function renderProjectsForCategory(catId) {
+  const projects = catId === "all" ? _allProjects : _allProjects.filter((p) => p.category === catId);
+  const featured = projects.filter((p) => p.featured);
+  const regular = projects.filter((p) => !p.featured);
+
+  // Featured projects
+  const featuredHtml = featured
+    .map((p) => {
+      const media = p.video
+        ? `<video poster="" loop muted playsinline autoplay><source src="${p.video}" type="video/mp4"></video>`
+        : p.image
+          ? `<img src="${p.image}" alt="${escapeHtml(p.title)}">`
+          : "";
+
+      const catLabel = _categories.find((c) => c.id === p.category);
+      const catBadge = catLabel ? `<span class="project-cat-badge">${escapeHtml(catLabel.label)}</span>` : "";
+
+      const links = p.links
+        .map(
+          (l) => `
+        <a href="${l.url}" target="_blank" class="button is-small is-rounded is-dark">
+          <span class="icon"><i class="${l.icon}"></i></span><span>${escapeHtml(l.label)}</span>
+        </a>`
+        )
+        .join("");
+
+      return `
+      <div class="project-card project-featured">
+        <div class="columns is-vcentered">
+          <div class="column is-5">
+            <div class="project-media">${media}</div>
+          </div>
+          <div class="column is-7">
+            <span class="project-tag">Featured</span> ${catBadge}
+            <h3 class="project-title">${escapeHtml(p.title)}</h3>
+            ${p.authors ? `<p class="project-authors">${escapeHtml(p.authors)}</p>` : ""}
+            <p class="project-desc">${escapeHtml(p.description)}</p>
+            <div class="project-links">${links}</div>
+          </div>
+        </div>
+      </div>`;
+    })
+    .join("");
+
+  document.getElementById("projects-featured").innerHTML = featuredHtml;
+
+  // Regular project cards
+  const gridHtml = regular
+    .map((p) => {
+      let mediaHtml;
+      if (p.image) {
+        mediaHtml = `<div class="project-media-small"><img src="${p.image}" alt="${escapeHtml(p.title)}"></div>`;
+      } else if (p.placeholderIcon) {
+        mediaHtml = `<div class="project-media-small placeholder-media"><i class="${p.placeholderIcon}"></i></div>`;
+      } else {
+        mediaHtml = `<div class="project-media-small placeholder-media"><i class="fas fa-flask"></i></div>`;
+      }
+
+      let linksHtml;
+      if (p.comingSoon) {
+        linksHtml = `<span class="tag is-dark">Coming Soon</span>`;
+      } else {
+        linksHtml = p.links
+          .map(
+            (l) => `
+          <a href="${l.url}" target="_blank" class="button is-small is-rounded is-dark">
+            <span class="icon"><i class="${l.icon}"></i></span><span>${escapeHtml(l.label)}</span>
+          </a>`
+          )
+          .join("");
+      }
+
+      const catLabel = _categories.find((c) => c.id === p.category);
+      const catBadge = catLabel ? `<span class="project-cat-badge">${escapeHtml(catLabel.label)}</span>` : "";
+
+      return `
+      <div class="column is-4">
+        <div class="project-card-small">
+          ${mediaHtml}
+          <div class="project-card-small-header">
+            ${catBadge}
+            <h4 class="project-title-small">${escapeHtml(p.title)}</h4>
+          </div>
+          <p class="project-desc-small">${escapeHtml(p.description)}</p>
+          <div class="project-links">${linksHtml}</div>
+        </div>
+      </div>`;
+    })
+    .join("");
+
+  document.getElementById("projects-grid").innerHTML = gridHtml;
+}
+
+function initProjects(categories, projects) {
+  _categories = categories;
+  _allProjects = projects;
+  renderTabs("research-tabs", categories, "all", renderProjectsForCategory);
+  renderProjectsForCategory("all");
+}
+
+// ---- Publications (with category filter) ---- //
+
+let _allPubs = [];
+
+function renderPubsForCategory(catId) {
+  const pubs = catId === "all" ? _allPubs : _allPubs.filter((p) => p.category === catId);
+
+  if (pubs.length === 0) {
+    document.getElementById("pub-list").innerHTML =
+      `<p class="has-text-centered" style="color: var(--text-muted); padding: 2rem 0;">No publications in this category yet.</p>`;
+    return;
+  }
+
+  const html = pubs
+    .map((p) => {
+      const links = p.links
+        .map(
+          (l) =>
+            `<a href="${l.url}" target="_blank"><i class="${l.icon}"></i> ${escapeHtml(l.label)}</a>`
+        )
+        .join("");
+
+      const catLabel = _categories.find((c) => c.id === p.category);
+      const catBadge = catLabel ? `<span class="pub-cat-badge">${escapeHtml(catLabel.label)}</span>` : "";
+
+      return `
+      <div class="pub-item">
+        <div class="pub-venue-year">
+          <span class="pub-year">${escapeHtml(p.year)}</span>
+          <span class="pub-venue">${escapeHtml(p.venue)}</span>
+        </div>
+        <div class="pub-details">
+          <h4 class="pub-title"><a href="${p.links[0]?.url || "#"}" target="_blank">${escapeHtml(p.title)}</a> ${catBadge}</h4>
+          <p class="pub-authors">${escapeHtml(p.authors)}</p>
+          <div class="pub-links">${links}</div>
+        </div>
+      </div>`;
+    })
+    .join("");
+
+  document.getElementById("pub-list").innerHTML = html;
+}
+
+function initPublications(categories, pubs) {
+  _allPubs = pubs;
+  renderTabs("pub-tabs", categories, "all", renderPubsForCategory);
+  renderPubsForCategory("all");
+}
+
+// ---- Blog ---- //
+
+async function renderBlog(index) {
+  const posts = await Promise.all(
+    index.map(async (entry) => {
+      try {
+        const body = await fetchText(`blog/${entry.file}`);
+        const firstPara = body.split(/\n\n/)[0] || body;
+        return { ...entry, excerpt: firstPara, body };
+      } catch {
+        return { ...entry, excerpt: "", body: "" };
+      }
+    })
+  );
+
+  const html = posts
+    .map(
+      (p) => `
+    <div class="column is-6">
+      <div class="blog-card" data-slug="${p.slug}">
+        <div class="blog-card-content">
+          <span class="blog-date">${escapeHtml(p.date)}</span>
+          <h4 class="blog-title"><a href="#blog-${p.slug}">${escapeHtml(p.title)}</a></h4>
+          <p class="blog-excerpt">${escapeHtml(p.excerpt)}</p>
+          <a href="#blog-${p.slug}" class="blog-read-more" data-slug="${p.slug}">Read more &rarr;</a>
+        </div>
+      </div>
+    </div>`
+    )
+    .join("");
+
+  document.getElementById("blog-list").innerHTML = html;
+  window.__blogPosts = posts;
+
+  document.querySelectorAll(".blog-read-more").forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const slug = this.dataset.slug;
+      const post = window.__blogPosts.find((p) => p.slug === slug);
+      if (post) showBlogPost(post);
+    });
+  });
+}
+
+function showBlogPost(post) {
+  let overlay = document.getElementById("blog-overlay");
+  if (!overlay) {
+    overlay = document.createElement("div");
+    overlay.id = "blog-overlay";
+    overlay.className = "blog-overlay";
+    document.body.appendChild(overlay);
+  }
+
+  overlay.innerHTML = `
+    <div class="blog-overlay-content">
+      <button class="blog-overlay-close" aria-label="Close">&times;</button>
+      <span class="blog-date">${escapeHtml(post.date)}</span>
+      <h2 class="blog-overlay-title">${escapeHtml(post.title)}</h2>
+      <div class="blog-overlay-body">${md(post.body)}</div>
+    </div>`;
+
+  overlay.classList.add("is-active");
+  document.body.style.overflow = "hidden";
+
+  overlay.querySelector(".blog-overlay-close").addEventListener("click", closeBlog);
+  overlay.addEventListener("click", function (e) {
+    if (e.target === overlay) closeBlog();
+  });
+}
+
+function closeBlog() {
+  const overlay = document.getElementById("blog-overlay");
+  if (overlay) {
+    overlay.classList.remove("is-active");
+    document.body.style.overflow = "";
+  }
+}
+
+// ---- Init ---- //
+
+$(document).ready(function () {
+  // Navbar burger toggle (mobile)
+  $(".navbar-burger").click(function () {
+    $(".navbar-burger").toggleClass("is-active");
+    $("#mainNavbar").toggleClass("is-active");
+  });
+
+  // Close mobile menu on link click
+  $(".navbar-menu .navbar-item").click(function () {
+    $(".navbar-burger").removeClass("is-active");
+    $("#mainNavbar").removeClass("is-active");
+  });
+
+  // Load categories first, then load projects & publications that depend on them
+  fetchJSON("categories.json").then((categories) => {
+    Promise.all([
+      fetchJSON("projects.json").then((projects) => initProjects(categories, projects)),
+      fetchJSON("publications.json").then((pubs) => initPublications(categories, pubs)),
+    ]);
+  });
+
+  // Load independent content in parallel
+  Promise.all([
+    fetchText("about.md").then(renderAbout),
+    fetchJSON("news.json").then(renderNews),
+    fetchJSON("blog/index.json").then(renderBlog),
+  ]).catch((err) => console.error("Failed to load content:", err));
+
+  // Close blog overlay with Escape key
+  $(document).on("keydown", function (e) {
+    if (e.key === "Escape") closeBlog();
+  });
+});

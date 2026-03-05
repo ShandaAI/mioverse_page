@@ -1,0 +1,14 @@
+[
+  {
+    "id": "digital-human",
+    "label": "Digital Human",
+    "icon": "fas fa-user-alt",
+    "description": "End-to-end autonomous digital humans that think, speak, emote, gesture, and render in real-time."
+  },
+  {
+    "id": "world-model",
+    "label": "World Model",
+    "icon": "fas fa-globe-asia",
+    "description": "Generate and explore AI-created virtual worlds with text control, real-time navigation, and long-context visual coherence."
+  }
+]

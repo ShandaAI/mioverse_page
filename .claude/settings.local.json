@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:research.cyberagent.ai)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(where:*)",
+      "Bash(powershell:*)",
+      "Bash(sed:*)",
+      "Bash(git ls-remote:*)",
+      "Bash(gh auth:*)"
+    ]
+  }
+}

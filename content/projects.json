@@ -1,0 +1,102 @@
+[
+  {
+    "category": "digital-human",
+    "featured": true,
+    "title": "M.I.O — Multimodal Interactive Omni-Avatar",
+    "authors": "Yiyi Cai, Xuangeng Chu, Xiwei Gao, Sitong Gong, Yifei Huang, Caixin Kang, Kunhang Li, Ruicong Liu, Haiyang Liu, Yun Liu, Dianwen Ng, Zixiong Su, Erwin Wu, Yuhan Wu, Tianyu Wu, Dingkun Yan, Chang Zeng, Bo Zheng, You Zhou",
+    "description": "An end-to-end framework for creating autonomous digital humans that think, speak, emote, gesture, and render in real-time — with personality-consistent expression and continuous self-evolution. Five cascading modules (Thinker, Talker, Facial Animator, Body Animator, Renderer) enable truly intelligent interaction at 30fps.",
+    "image": "",
+    "video": "static/videos/teaser.mp4",
+    "links": [
+      { "label": "Paper", "url": "https://arxiv.org/abs/2507.13344", "icon": "fas fa-file-pdf" },
+      { "label": "Code", "url": "https://github.com/", "icon": "fab fa-github" },
+      { "label": "Project Page", "url": "index_project.html", "icon": "fas fa-external-link-alt" }
+    ]
+  },
+  {
+    "category": "world-model",
+    "featured": true,
+    "title": "Sekai — Interactive World Model",
+    "authors": "",
+    "description": "Generate and explore AI-created virtual worlds with text control, real-time navigation, and long-context visual coherence. Built on a DiT-based diffusion architecture with bidirectional attention distillation, Sekai achieves 24fps real-time generation at 720p with 10s+ coherent context windows. Supports three interaction modes: Text-to-World generation, Image-to-World extension, and dynamic Event Editing.",
+    "image": "",
+    "video": "",
+    "links": [],
+    "comingSoon": true,
+    "placeholderIcon": "fas fa-globe-asia"
+  },
+  {
+    "category": "digital-human",
+    "featured": false,
+    "title": "Thinker — LLM-Powered Cognitive Engine",
+    "authors": "",
+    "description": "Personality modeling, long-term memory, and emotional reasoning that drives entire avatar behavior with consistent personality across interactions.",
+    "image": "",
+    "video": "",
+    "links": [
+      { "label": "Demo", "url": "https://app--novel-chat-dbcf99d8.base44.app/", "icon": "fas fa-play" }
+    ],
+    "placeholderIcon": "fas fa-brain"
+  },
+  {
+    "category": "digital-human",
+    "featured": false,
+    "title": "Talker — Expressive Speech Synthesis",
+    "authors": "",
+    "description": "Fine-grained emotion and prosody control for natural-sounding voice aligned with personality and conversational context.",
+    "image": "",
+    "video": "",
+    "links": [],
+    "comingSoon": true,
+    "placeholderIcon": "fas fa-microphone-alt"
+  },
+  {
+    "category": "digital-human",
+    "featured": false,
+    "title": "Body Animator — Co-speech Gesture Synthesis",
+    "authors": "",
+    "description": "Full-body gesture synthesis with co-speech gestures, posture shifts, and reactive body language driven by context.",
+    "image": "",
+    "video": "",
+    "links": [
+      { "label": "Project", "url": "https://shandaai.github.io/FloodDiffusion/", "icon": "fas fa-external-link-alt" }
+    ],
+    "placeholderIcon": "fas fa-running"
+  },
+  {
+    "category": "world-model",
+    "featured": false,
+    "title": "Text-to-World Generation",
+    "authors": "",
+    "description": "Describe any environment in natural language and generate a fully explorable 3D-like world with WASD free navigation through AI-imagined landscapes.",
+    "image": "",
+    "video": "",
+    "links": [],
+    "comingSoon": true,
+    "placeholderIcon": "fas fa-keyboard"
+  },
+  {
+    "category": "world-model",
+    "featured": false,
+    "title": "Image-to-World Extension",
+    "authors": "",
+    "description": "Provide a reference image and extend it into a navigable environment, maintaining visual style and spatial coherence during exploration.",
+    "image": "",
+    "video": "",
+    "links": [],
+    "comingSoon": true,
+    "placeholderIcon": "fas fa-image"
+  },
+  {
+    "category": "world-model",
+    "featured": false,
+    "title": "Event Editing — Dynamic World Modification",
+    "authors": "",
+    "description": "Dynamically modify worlds mid-exploration via text commands — change weather, time of day, add objects, trigger events while maintaining visual continuity.",
+    "image": "",
+    "video": "",
+    "links": [],
+    "comingSoon": true,
+    "placeholderIcon": "fas fa-magic"
+  }
+]
