@@ -5,12 +5,13 @@
     "title": "M.I.O — Multimodal Interactive Omni-Avatar",
     "authors": "Yiyi Cai, Xuangeng Chu, Xiwei Gao, Sitong Gong, Yifei Huang, Caixin Kang, Kunhang Li, Ruicong Liu, Haiyang Liu, Yun Liu, Dianwen Ng, Zixiong Su, Erwin Wu, Yuhan Wu, Tianyu Wu, Dingkun Yan, Chang Zeng, Bo Zheng, You Zhou",
     "description": "An end-to-end framework for creating autonomous digital humans that think, speak, emote, gesture, and render in real-time — with personality-consistent expression and continuous self-evolution. Five cascading modules (Thinker, Talker, Facial Animator, Body Animator, Renderer) enable truly intelligent interaction at 30fps.",
-    "image": "",
-    "video": "static/videos/teaser.mp4",
+    "image": "static/images/pipeline.png",
+    "video": "",
     "links": [
       { "label": "Paper", "url": "https://arxiv.org/abs/2507.13344", "icon": "fas fa-file-pdf" },
       { "label": "Code", "url": "https://github.com/", "icon": "fab fa-github" },
-      { "label": "Project Page", "url": "index_project.html", "icon": "fas fa-external-link-alt" }
+      { "label": "Project Page", "url": "index_project.html", "icon": "fas fa-external-link-alt" },
+      { "label": "Demo", "url": "#demo-mio", "icon": "fas fa-play-circle" }
     ]
   },
   {
@@ -19,11 +20,14 @@
     "title": "Sekai — Interactive World Model",
     "authors": "",
     "description": "Generate and explore AI-created virtual worlds with text control, real-time navigation, and long-context visual coherence. Built on a DiT-based diffusion architecture with bidirectional attention distillation, Sekai achieves 24fps real-time generation at 720p with 10s+ coherent context windows. Supports three interaction modes: Text-to-World generation, Image-to-World extension, and dynamic Event Editing.",
-    "image": "",
+    "image": "static/images/world_model.svg",
     "video": "",
-    "links": [],
-    "comingSoon": true,
-    "placeholderIcon": "fas fa-globe-asia"
+    "links": [
+      { "label": "Paper", "url": "https://arxiv.org/abs/2506.00000", "icon": "fas fa-file-pdf" },
+      { "label": "Code", "url": "https://github.com/shanda-ai/sekai", "icon": "fab fa-github" },
+      { "label": "Project Page", "url": "https://shanda-ai.github.io/sekai/", "icon": "fas fa-external-link-alt" },
+      { "label": "Demo", "url": "#demo-sekai", "icon": "fas fa-play-circle" }
+    ]
   },
   {
     "category": "digital-human",

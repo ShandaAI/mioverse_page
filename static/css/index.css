@@ -42,7 +42,7 @@ body {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--dark-border);
-  min-height: 3.5rem;
+  min-height: 4.5rem;
 }
 
 .nav-logo-text {
@@ -54,7 +54,7 @@ body {
 
 .navbar-item {
   color: var(--text-secondary) !important;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   font-weight: 400;
   transition: color 0.2s;
 }
@@ -90,7 +90,7 @@ body {
 /* ---- Hero ---- */
 .hero.is-fullheight-with-navbar {
   background: var(--dark-bg);
-  min-height: calc(100vh - 3.5rem);
+  min-height: calc(100vh - 4.5rem);
 }
 
 .hero-body {
@@ -152,13 +152,15 @@ body {
 }
 
 .hero-btn-outline {
-  color: var(--text-primary) !important;
-  border-color: var(--dark-border) !important;
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 .hero-btn-outline:hover {
+  background: var(--accent) !important;
   border-color: var(--accent) !important;
-  color: var(--accent-light) !important;
+  color: #fff !important;
 }
 
 .hero-visual {
@@ -925,7 +927,7 @@ html {
 
 /* ---- Logo ---- */
 .nav-logo-img {
-  height: 32px;
+  height: 42px;
   width: auto;
 }
 
