@@ -567,6 +567,22 @@ body {
   transform: translateY(-2px);
 }
 
+.blog-card-image {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.blog-card:hover .blog-card-image img {
+  transform: scale(1.03);
+}
+
 .blog-card-content {
   padding: 1.5rem;
 }
@@ -927,7 +943,7 @@ html {
 
 /* ---- Logo ---- */
 .nav-logo-img {
-  height: 42px;
+  height: 56px;
   width: auto;
 }
 
@@ -938,4 +954,378 @@ html {
 .hero-logo img {
   height: 48px;
   width: auto;
+}
+
+/* ============================================
+   Home Page — Full-bleed Hero
+   ============================================ */
+
+.home-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.home-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home-hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(10, 10, 10, 0.92) 0%,
+    rgba(10, 10, 10, 0.65) 45%,
+    rgba(10, 10, 10, 0.15) 100%
+  );
+}
+
+.home-hero .hero-body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.home-hero-inner {
+  max-width: 680px;
+}
+
+.home-title {
+  font-size: 4.2rem;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+}
+
+.home-subtitle {
+  font-size: 1.35rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 2.5rem;
+  max-width: 520px;
+}
+
+.home-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.home-btn-primary {
+  font-size: 1.1rem !important;
+  font-weight: 700;
+  padding: 0.85rem 2.2rem !important;
+}
+
+.home-btn-secondary {
+  font-size: 1.1rem !important;
+  font-weight: 700;
+  padding: 0.85rem 2.2rem !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  backdrop-filter: blur(8px);
+}
+
+.home-btn-secondary:hover {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
+}
+
+@media screen and (max-width: 768px) {
+  .home-title {
+    font-size: 2.4rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .home-hero-bg::after {
+    background: linear-gradient(
+      to bottom,
+      rgba(10, 10, 10, 0.85) 0%,
+      rgba(10, 10, 10, 0.55) 60%,
+      rgba(10, 10, 10, 0.8) 100%
+    );
+  }
+}
+
+/* ============================================
+   Platform Page — Meshcapade-style Layout
+   ============================================ */
+
+.platform-page {
+  padding-top: 4.5rem; /* navbar height */
+  background: var(--dark-bg);
+}
+
+/* ---- Tab Cards Row ---- */
+.platform-tabs-row {
+  display: flex;
+  gap: 0;
+}
+
+.platform-tab {
+  flex: 1;
+  background: var(--dark-bg-card);
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 1.5rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+  transition: all 0.25s;
+}
+
+.platform-tab + .platform-tab {
+  border-left: 1px solid var(--dark-border);
+}
+
+.platform-tab:hover {
+  background: var(--dark-bg-hover);
+}
+
+.platform-tab.is-active {
+  background: var(--dark-bg-light);
+  border-bottom-color: var(--accent);
+}
+
+.platform-tab-icon {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  transition: color 0.25s;
+}
+
+.platform-tab.is-active .platform-tab-icon {
+  color: var(--accent);
+}
+
+.platform-tab-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.platform-tab-label {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--text-primary);
+}
+
+.platform-tab-bold {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-light);
+}
+
+.platform-tab.is-active .platform-tab-bold {
+  color: var(--accent-light);
+}
+
+.platform-tab-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-top: 0.1rem;
+}
+
+/* ---- Tab Panels (full-bleed hero style) ---- */
+.platform-panels {
+  position: relative;
+}
+
+.platform-panel {
+  display: none;
+  position: relative;
+  min-height: calc(100vh - 4.5rem - 110px);
+  overflow: hidden;
+}
+
+.platform-panel.is-active {
+  display: block;
+  animation: panelFadeIn 0.35s ease;
+}
+
+@keyframes panelFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Background video/image — full bleed */
+.platform-panel-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.platform-panel-bg video,
+.platform-panel-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.platform-panel-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark-bg-hover);
+}
+
+.platform-panel-placeholder i {
+  font-size: 6rem;
+  color: var(--text-muted);
+  opacity: 0.25;
+}
+
+/* Gradient overlay — dark on right for text readability */
+.platform-panel-overlay {
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 4.5rem - 110px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 4rem 2.5rem;
+  background: linear-gradient(
+    to left,
+    rgba(10, 10, 10, 0.92) 0%,
+    rgba(10, 10, 10, 0.65) 45%,
+    rgba(10, 10, 10, 0.15) 100%
+  );
+}
+
+.platform-panel-content {
+  max-width: 520px;
+}
+
+.platform-panel-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  margin-bottom: 1.25rem;
+}
+
+.platform-panel-headline {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.platform-panel-desc {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* ---- Platform Responsive ---- */
+@media screen and (max-width: 1023px) {
+  .platform-tabs-row {
+    flex-direction: column;
+  }
+
+  .platform-tab + .platform-tab {
+    border-left: none;
+    border-top: 1px solid var(--dark-border);
+  }
+
+  .platform-tab {
+    padding: 1rem 1.25rem;
+  }
+
+  .platform-panel-overlay {
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(
+      to top,
+      rgba(10, 10, 10, 0.92) 0%,
+      rgba(10, 10, 10, 0.55) 60%,
+      rgba(10, 10, 10, 0.3) 100%
+    );
+  }
+
+  .platform-panel-headline {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .platform-tab-desc {
+    display: none;
+  }
+
+  .platform-panel-headline {
+    font-size: 1.6rem;
+  }
+
+  .platform-panel-overlay {
+    padding: 3rem 1.25rem;
+  }
+}
+
+/* ============================================
+   Navbar — Contact Button & Active State
+   ============================================ */
+
+.contact-btn {
+  background: var(--accent) !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+  padding: 0.4rem 1rem !important;
+  margin: 0.5rem 0.25rem;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.contact-btn:hover {
+  opacity: 0.85;
+  color: #fff !important;
+}
+
+.is-active-page {
+  color: var(--text-primary) !important;
+  border-bottom: 2px solid var(--accent);
+}
+
+@media screen and (max-width: 1023px) {
+  .is-active-page {
+    border-bottom: none;
+    color: var(--accent-light) !important;
+  }
 }

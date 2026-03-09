@@ -1,14 +1,16 @@
 [
   {
-    "slug": "2025-07-introducing-mio",
-    "date": "July 2025",
-    "title": "Introducing MIO: A New Paradigm for Digital Humans",
-    "file": "2025-07-introducing-mio.md"
+    "slug": "2025-12-siggraph-asia",
+    "date": "December 2025",
+    "title": "Shanda AI Research Tokyo Debuts at SIGGRAPH Asia 2025",
+    "file": "2025-12-siggraph-asia.md",
+    "image": "static/images/hero-bg.png"
   },
   {
-    "slug": "2025-04-building-lab",
-    "date": "April 2025",
+    "slug": "2025-07-building-lab",
+    "date": "July 2025",
     "title": "Building the Shanda AI Research Lab in Tokyo",
-    "file": "2025-04-building-lab.md"
+    "file": "2025-07-building-lab.md",
+    "image": "static/images/tokyo-office.jpg"
   }
 ]

@@ -1,0 +1,20 @@
+{
+  "id": "tts",
+  "tab": {
+    "icon": "fas fa-comment-dots",
+    "label": "Emotional Japanese TTS",
+    "bold": "Expressive speech synthesis.",
+    "desc": "Natural-sounding Japanese with precise emotional control."
+  },
+  "panel": {
+    "badge": "Emotional Japanese TTS",
+    "headline": "Voices that<br><span class=\"gradient-headline\">feel alive</span><br>— expressive Japanese speech.",
+    "description": "Precise control over tone, pitch, and emotional nuance for digital characters. Natural-sounding Japanese with rich prosody and emotion.",
+    "buttonText": "Try now!",
+    "buttonLink": "research.html",
+    "background": {
+      "type": "placeholder",
+      "icon": "fas fa-comment-dots"
+    }
+  }
+}

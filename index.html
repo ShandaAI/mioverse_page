@@ -3,20 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Shanda AI Research Tokyo — Advancing interactive intelligence through digital humans and world models.">
-  <meta property="og:title" content="Shanda AI Research Tokyo" />
+  <meta name="description" content="MioVerse.ai — Advancing interactive intelligence through digital humans and world models.">
+  <meta property="og:title" content="MioVerse.ai" />
   <meta property="og:description" content="Advancing interactive intelligence through digital humans and world models." />
   <meta property="og:url" content="https://shanda-ai.github.io/" />
   <meta property="og:image" content="static/images/teaser_1200x600.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="600" />
-  <meta name="twitter:title" content="Shanda AI Research Tokyo">
+  <meta name="twitter:title" content="MioVerse.ai">
   <meta name="twitter:description" content="Advancing interactive intelligence through digital humans and world models.">
   <meta name="twitter:image" content="static/images/teaser_1200x600.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Shanda AI Research Tokyo</title>
+  <title>MioVerse.ai</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 
@@ -37,7 +37,7 @@
   <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item nav-logo" href="#">
+        <a class="navbar-item nav-logo" href="index.html">
           <img src="static/images/logo.svg" alt="MioVerse.ai" class="nav-logo-img">
         </a>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNavbar">
@@ -48,96 +48,47 @@
       </div>
       <div id="mainNavbar" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item" href="#about">About</a>
-          <a class="navbar-item" href="#news">News</a>
-          <a class="navbar-item" href="#research">Research</a>
-          <a class="navbar-item" href="#publications">Publications</a>
-          <a class="navbar-item" href="#blog">Blog</a>
+          <a class="navbar-item" href="index.html">Home</a>
+          <a class="navbar-item" href="research.html">Research</a>
+          <a class="navbar-item" href="platform.html">Platform</a>
+          <a class="navbar-item" href="blog.html">Blog</a>
+          <a class="navbar-item contact-btn" href="mailto:jp@shanda.com">
+            <i class="fas fa-envelope"></i>&nbsp;Contact
+          </a>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- ===== Hero ===== -->
-  <section class="hero is-fullheight-with-navbar" id="hero">
+  <!-- ===== Home Hero ===== -->
+  <section class="hero is-fullheight-with-navbar home-hero">
+    <div class="home-hero-bg">
+      <img src="static/images/hero-bg.png" alt="">
+    </div>
     <div class="hero-body">
       <div class="container">
-        <div class="columns is-vcentered">
-          <div class="column is-7">
-            <div class="hero-logo"><img src="static/images/logo.svg" alt="MioVerse.ai"></div>
-            <h1 class="hero-title">
-              Advancing <span class="gradient-headline">Interactive Intelligence</span> through Digital Humans &amp; World Models
-            </h1>
-            <p class="hero-subtitle">
-              We conduct fundamental and applied research in computer vision, graphics, and multimodal AI — building intelligent digital humans and learning structured world representations.
-            </p>
-            <div class="hero-actions">
-              <a href="#research" class="button is-medium is-link is-rounded">Our Research</a>
-              <a href="#publications" class="button is-medium is-outlined is-rounded hero-btn-outline">Try!</a>
-            </div>
-          </div>
-          <div class="column is-5">
-            <div class="hero-visual">
-              <video poster="" id="hero-video" loop muted playsinline autoplay>
-                <source src="static/videos/teaser.mp4" type="video/mp4">
-              </video>
-            </div>
+        <div class="home-hero-inner">
+          <h1 class="home-title" id="home-title">
+            Advancing<br><span class="gradient-headline">Interactive Intelligence</span><br>
+            through Digital Humans<br>&amp; World Models
+          </h1>
+          <p class="home-subtitle" id="home-subtitle">
+            Fundamental and applied research in computer vision, graphics, and multimodal AI.
+          </p>
+          <div class="home-cta">
+            <a href="research.html" class="button is-large is-link is-rounded home-btn-primary">Research</a>
+            <a href="platform.html" class="button is-large is-rounded home-btn-secondary">Platform</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== About ===== -->
+  <!-- ===== About Us ===== -->
   <section class="section" id="about">
     <div class="container is-max-desktop">
       <h2 class="section-heading">About Us</h2>
-      <!-- Content loaded from content/about.md -->
       <div class="about-content" id="about-content"></div>
-    </div>
-  </section>
-
-  <!-- ===== News ===== -->
-  <section class="section section-alt" id="news">
-    <div class="container is-max-desktop">
-      <h2 class="section-heading">News</h2>
-      <!-- Content loaded from content/news.json -->
-      <div class="news-list" id="news-list"></div>
-    </div>
-  </section>
-
-  <!-- ===== Research / Projects ===== -->
-  <section class="section" id="research">
-    <div class="container">
-      <h2 class="section-heading">Research</h2>
-      <p class="section-subheading">Selected projects from our lab.</p>
-      <!-- Category tabs loaded from content/categories.json -->
-      <div class="research-tabs" id="research-tabs"></div>
-      <!-- Content loaded from content/projects.json -->
-      <div id="projects-featured"></div>
-      <div class="columns is-multiline project-grid" id="projects-grid"></div>
-    </div>
-  </section>
-
-  <!-- ===== Publications ===== -->
-  <section class="section section-alt" id="publications">
-    <div class="container is-max-desktop">
-      <h2 class="section-heading">Publications</h2>
-      <p class="section-subheading">Selected papers from our team.</p>
-      <!-- Category tabs for publications -->
-      <div class="research-tabs" id="pub-tabs"></div>
-      <!-- Content loaded from content/publications.json -->
-      <div class="pub-list" id="pub-list"></div>
-    </div>
-  </section>
-
-  <!-- ===== Blog ===== -->
-  <section class="section" id="blog">
-    <div class="container is-max-desktop">
-      <h2 class="section-heading">Blog</h2>
-      <p class="section-subheading">Insights and updates from our research.</p>
-      <!-- Content loaded from content/blog/index.json + *.md -->
-      <div class="columns is-multiline" id="blog-list"></div>
     </div>
   </section>
 
@@ -153,10 +104,9 @@
         <div class="column is-4">
           <p class="footer-heading">Links</p>
           <ul class="footer-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#blog">Blog</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="platform.html">Platform</a></li>
           </ul>
         </div>
         <div class="column is-4">
@@ -164,6 +114,7 @@
           <div class="footer-social">
             <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:jp@shanda.com"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
       </div>

@@ -1,27 +1,27 @@
 [
   {
-    "date": "2025.07",
-    "badge": "paper",
-    "text": "Our paper <a href='https://arxiv.org/abs/2507.13344' target='_blank'>\"MIO: Towards Interactive Intelligence for Digital Humans\"</a> is now available on arXiv."
-  },
-  {
-    "date": "2025.07",
-    "badge": "release",
-    "text": "We have released the MIO codebase and pretrained models on <a href='https://github.com/' target='_blank'>GitHub</a> and <a href='https://huggingface.co/' target='_blank'>Hugging Face</a>."
-  },
-  {
-    "date": "2025.06",
-    "badge": "release",
-    "text": "Project Sekai achieves 24fps real-time world generation at 720p with bidirectional attention distillation."
-  },
-  {
-    "date": "2025.05",
+    "date": "2026.03",
     "badge": "announcement",
-    "text": "MioVerse.ai platform launched — unifying Digital Human Agents and Interactive World Models under one research umbrella."
+    "text": "MioVerse.ai platform launched, with live demos and research platforms for trial! Unifying Digital Human and Interactive World Models under one research umbrella."
   },
   {
-    "date": "2025.04",
-    "badge": "lab",
+    "date": "2026.02",
+    "badge": "paper",
+    "text": "Four papers are accepted to <a href='https://cvpr.thecvf.com/' target='_blank'>CVPR2026</a>!"
+  },
+  {
+    "date": "2026.12",
+    "badge": "paper",
+    "text": "One paper is accepted to <a href='https://dl.acm.org/journal/imwut' target='_blank'>IMWUT 2026</a>!"
+  },
+  {
+    "date": "2025.12",
+    "badge": "announcement",
+    "text": "We debuted at <a href='blog.html'>SIGGRAPH Asia 2025</a> in Hong Kong with a Mio showcase, BoF session, and Shanda Tokyo Night dinner! <a href='blog.html'>Read more</a>"
+  },
+  {
+    "date": "2025.07",
+    "badge": "announcement",
     "text": "Shanda AI Research Tokyo officially launches, bringing together researchers in vision, graphics, and multimodal AI."
   }
 ]

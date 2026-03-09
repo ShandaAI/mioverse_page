@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Platform | MioVerse.ai — Interactive demos for digital humans, speech synthesis, and world models.">
+  <meta property="og:title" content="Platform | MioVerse.ai" />
+  <meta property="og:description" content="Interactive demos for digital humans, speech synthesis, and world models." />
+  <meta property="og:url" content="https://shanda-ai.github.io/" />
+  <meta property="og:image" content="static/images/teaser_1200x600.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="600" />
+  <meta name="twitter:title" content="Platform | MioVerse.ai">
+  <meta name="twitter:description" content="Interactive demos for digital humans, speech synthesis, and world models.">
+  <meta name="twitter:image" content="static/images/teaser_1200x600.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Platform | MioVerse.ai</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+</head>
+
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item nav-logo" href="index.html">
+          <img src="static/images/logo.svg" alt="MioVerse.ai" class="nav-logo-img">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNavbar">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="mainNavbar" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="index.html">Home</a>
+          <a class="navbar-item" href="research.html">Research</a>
+          <a class="navbar-item" href="platform.html">Platform</a>
+          <a class="navbar-item" href="blog.html">Blog</a>
+          <a class="navbar-item contact-btn" href="mailto:jp@shanda.com">
+            <i class="fas fa-envelope"></i>&nbsp;Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Platform ===== -->
+  <div class="platform-page">
+
+    <!-- Tab Cards (loaded from content/platform/*.json) -->
+    <div class="platform-tabs-row" id="platform-tabs-row"></div>
+
+    <!-- Tab Panels (loaded from content/platform/*.json) -->
+    <div class="platform-panels" id="platform-panels"></div>
+
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-4">
+          <p class="footer-brand">MioVerse.ai</p>
+          <p class="footer-tagline">Advancing interactive intelligence through digital humans and world models.</p>
+          <p class="footer-org">A research initiative by Shanda AI Research Tokyo</p>
+        </div>
+        <div class="column is-4">
+          <p class="footer-heading">Links</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="platform.html">Platform</a></li>
+          </ul>
+        </div>
+        <div class="column is-4">
+          <p class="footer-heading">Connect</p>
+          <div class="footer-social">
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:jp@shanda.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Shanda AI Research Tokyo. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

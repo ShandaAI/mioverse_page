@@ -1,0 +1,20 @@
+{
+  "id": "digital-human",
+  "tab": {
+    "icon": "fas fa-user-astronaut",
+    "label": "Live Digital Human",
+    "bold": "Real-time autonomous avatar.",
+    "desc": "Speech, emotion, and motion synthesis powered by M.I.O framework."
+  },
+  "panel": {
+    "badge": "Live Digital Human",
+    "headline": "Autonomous avatars with<br><span class=\"gradient-headline\">lifelike expression</span><br>— powered by M.I.O.",
+    "description": "Real-time conversation, emotion, and motion synthesis in one unified framework. Interact with an AI-driven digital human that sees, listens, and responds naturally.",
+    "buttonText": "Try now!",
+    "buttonLink": "research.html",
+    "background": {
+      "type": "video",
+      "src": "https://shandaai.github.io/project_mio_page/static/videos/teaser.mp4"
+    }
+  }
+}
