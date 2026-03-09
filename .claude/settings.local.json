@@ -8,7 +8,29 @@
       "Bash(powershell:*)",
       "Bash(sed:*)",
       "Bash(git ls-remote:*)",
-      "Bash(gh auth:*)"
+      "Bash(gh auth:*)",
+      "Bash(python -m http.server:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Bash(git stash pop:*)",
+      "Bash(start \"\" \"C:\\\\Users\\\\Erwin Wu\\\\Documents\\\\Projects\\\\mioverse_page\\\\index.html\")",
+      "Bash(start:*)",
+      "WebFetch(domain:meshcapade.com)",
+      "WebSearch",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(python:*)",
+      "WebFetch(domain:shandaai.github.io)",
+      "WebFetch(domain:lixsp11.github.io)",
+      "Bash(gh api:*)",
+      "Bash(gh.exe api:*)",
+      "WebFetch(domain:api.github.com)",
+      "WebFetch(domain:cdn.jsdelivr.net)",
+      "WebFetch(domain:mp.weixin.qq.com)",
+      "WebFetch(domain:finance.sina.com.cn)"
     ]
   }
 }
