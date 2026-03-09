@@ -13,8 +13,24 @@
     "buttonText": "Try now!",
     "buttonLink": "research.html",
     "background": {
-      "type": "placeholder",
-      "icon": "fas fa-comment-dots"
+      "type": "audio-samples",
+      "samples": [
+        {
+          "text": "バッカじゃないの？！君はどうなろうと、私の知ったことじゃないから、どっかに消えて。",
+          "emotion": "Angry",
+          "audio": "static/audio/sample-angry.mp3"
+        },
+        {
+          "text": "あの日のことを思い出すと、胸が痛くなります…",
+          "emotion": "Sad",
+          "audio": "static/audio/sample-angry.mp3"
+        },
+	{
+          "text": "今日はとても良い天気ですね！一緒に散歩しましょう。",
+          "emotion": "Happy",
+          "audio": "static/audio/sample-angry.mp3"
+        }
+      ]
     }
   }
 }

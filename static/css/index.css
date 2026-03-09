@@ -1211,6 +1211,7 @@ html {
   align-items: center;
   justify-content: flex-end;
   padding: 4rem 2.5rem;
+  pointer-events: none;
   background: linear-gradient(
     to left,
     rgba(10, 10, 10, 0.92) 0%,
@@ -1221,6 +1222,7 @@ html {
 
 .platform-panel-content {
   max-width: 520px;
+  pointer-events: auto;
 }
 
 .platform-panel-badge {
@@ -1295,6 +1297,121 @@ html {
 
   .platform-panel-overlay {
     padding: 3rem 1.25rem;
+  }
+}
+
+/* ---- TTS Audio Samples ---- */
+.tts-samples-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem 2.5rem;
+  z-index: 2;
+}
+
+.tts-sample-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.tts-sample-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.tts-sample-text {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin-bottom: 0.85rem;
+  font-family: 'Noto Sans JP', 'Lato', sans-serif;
+}
+
+.tts-sample-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tts-emotion-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.tts-emotion-happy {
+  background: rgba(76, 175, 80, 0.35);
+  color: #81c784;
+}
+
+.tts-emotion-sad {
+  background: rgba(66, 165, 245, 0.35);
+  color: #90caf9;
+}
+
+.tts-emotion-angry {
+  background: rgba(239, 83, 80, 0.35);
+  color: #ef9a9a;
+}
+
+.tts-play-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  flex-shrink: 0;
+}
+
+.tts-play-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: scale(1.1);
+}
+
+.tts-play-btn.is-playing {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+@media screen and (max-width: 1023px) {
+  .tts-samples-grid {
+    position: relative;
+    width: 100%;
+    padding: 2rem 1.25rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tts-samples-grid {
+    padding: 1.5rem 1rem 0;
+  }
+
+  .tts-sample-text {
+    font-size: 0.95rem;
   }
 }
 

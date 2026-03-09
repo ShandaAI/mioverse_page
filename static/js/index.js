@@ -385,6 +385,21 @@ $(document).ready(function () {
           bgHtml = '<video id="hls-video-' + p.id + '" loop muted playsinline autoplay></video>';
         } else if (p.panel.background.type === "image") {
           bgHtml = '<img src="' + p.panel.background.src + '" alt="">';
+        } else if (p.panel.background.type === "audio-samples" && p.panel.background.samples) {
+          bgHtml = '<div class="tts-samples-grid">' +
+            p.panel.background.samples.map(function (s, si) {
+              return '<div class="tts-sample-card">' +
+                '<div class="tts-sample-text">' + escapeHtml(s.text) + '</div>' +
+                '<div class="tts-sample-footer">' +
+                  '<span class="tts-emotion-badge tts-emotion-' + s.emotion.toLowerCase() + '">' + escapeHtml(s.emotion) + '</span>' +
+                  '<button class="tts-play-btn" data-audio="' + s.audio + '" aria-label="Play">' +
+                    '<i class="fas fa-play"></i>' +
+                  '</button>' +
+                '</div>' +
+                '<audio src="' + s.audio + '" preload="none"></audio>' +
+              '</div>';
+            }).join("") +
+          '</div>';
         } else {
           bgHtml = '<div class="platform-panel-placeholder"><i class="' + (p.panel.background.icon || "fas fa-flask") + '"></i></div>';
         }
@@ -412,6 +427,33 @@ $(document).ready(function () {
         $(this).addClass("is-active");
         $(".platform-panel").removeClass("is-active");
         $("#panel-" + demoId).addClass("is-active");
+      });
+
+      // Bind TTS play/pause buttons
+      $(".tts-play-btn").click(function () {
+        var btn = $(this);
+        var card = btn.closest(".tts-sample-card");
+        var audio = card.find("audio")[0];
+        // Pause any other playing sample
+        $(".tts-play-btn").not(btn).each(function () {
+          var otherAudio = $(this).closest(".tts-sample-card").find("audio")[0];
+          if (otherAudio && !otherAudio.paused) {
+            otherAudio.pause();
+            otherAudio.currentTime = 0;
+            $(this).removeClass("is-playing").find("i").attr("class", "fas fa-play");
+          }
+        });
+        if (audio.paused) {
+          audio.play();
+          btn.addClass("is-playing").find("i").attr("class", "fas fa-pause");
+        } else {
+          audio.pause();
+          audio.currentTime = 0;
+          btn.removeClass("is-playing").find("i").attr("class", "fas fa-play");
+        }
+        audio.onended = function () {
+          btn.removeClass("is-playing").find("i").attr("class", "fas fa-play");
+        };
       });
 
       // Init HLS videos
