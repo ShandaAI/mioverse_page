@@ -1,7 +1,6 @@
 [
   {
-    "category": "digital-human",
-    "year": "2025",
+    "year": "2025 Dec",
     "venue": "arXiv",
     "title": "MIO: Towards Interactive Intelligence for Digital Humans",
     "authors": "Yiyi Cai, Xuangeng Chu, Xiwei Gao, Sitong Gong, Yifei Huang, Caixin Kang, Kunhang Li, Ruicong Liu, Haiyang Liu, Yun Liu, Dianwen Ng, Zixiong Su, Erwin Wu, Yuhan Wu, Tianyu Wu, Dingkun Yan, Chang Zeng, Bo Zheng, You Zhou",
@@ -9,6 +8,15 @@
       { "label": "PDF", "url": "https://arxiv.org/abs/2507.13344", "icon": "fas fa-file-pdf" },
       { "label": "Code", "url": "https://github.com/", "icon": "fab fa-github" },
       { "label": "Project", "url": "index_project.html", "icon": "fas fa-globe" }
+    ]
+  },
+  {
+    "year": "2026 Jun",
+    "venue": "CVPR2026",
+    "title": "DyaDiT: A Multi-Modal Diffusion Transformer for Socially Favorable Dyadic Gesture Generation",
+    "authors": "Yichen Peng, Jyun-Ting Song, Siyeol Jung,  Ruofan Liu,  Haiyang Liu,  Xuangeng Chu,  Ruicong Liu, Erwin Wu, Hideki Koike, Kris Kitani",
+    "links": [
+      { "label": "PDF", "url": "https://arxiv.org/abs/2602.23165", "icon": "fas fa-file-pdf" }
     ]
   }
 ]

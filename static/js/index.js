@@ -202,16 +202,12 @@ function initProjects(categories, projects) {
   renderProjectsForCategory("all");
 }
 
-// ---- Publications (with category filter) ---- //
+// ---- Publications ---- //
 
-let _allPubs = [];
-
-function renderPubsForCategory(catId) {
-  const pubs = catId === "all" ? _allPubs : _allPubs.filter((p) => p.category === catId);
-
+function renderPublications(pubs) {
   if (pubs.length === 0) {
     document.getElementById("pub-list").innerHTML =
-      `<p class="has-text-centered" style="color: var(--text-muted); padding: 2rem 0;">No publications in this category yet.</p>`;
+      `<p class="has-text-centered" style="color: var(--text-muted); padding: 2rem 0;">No publications yet.</p>`;
     return;
   }
 
@@ -224,17 +220,15 @@ function renderPubsForCategory(catId) {
         )
         .join("");
 
-      const catLabel = _categories.find((c) => c.id === p.category);
-      const catBadge = catLabel ? `<span class="pub-cat-badge">${escapeHtml(catLabel.label)}</span>` : "";
+      const venueBadge = p.venue ? `<span class="pub-cat-badge">${escapeHtml(p.venue)}</span>` : "";
 
       return `
       <div class="pub-item">
         <div class="pub-venue-year">
           <span class="pub-year">${escapeHtml(p.year)}</span>
-          <span class="pub-venue">${escapeHtml(p.venue)}</span>
         </div>
         <div class="pub-details">
-          <h4 class="pub-title"><a href="${p.links[0]?.url || "#"}" target="_blank">${escapeHtml(p.title)}</a> ${catBadge}</h4>
+          <h4 class="pub-title"><a href="${p.links[0]?.url || "#"}" target="_blank">${escapeHtml(p.title)}</a> ${venueBadge}</h4>
           <p class="pub-authors">${escapeHtml(p.authors)}</p>
           <div class="pub-links">${links}</div>
         </div>
@@ -243,12 +237,6 @@ function renderPubsForCategory(catId) {
     .join("");
 
   document.getElementById("pub-list").innerHTML = html;
-}
-
-function initPublications(categories, pubs) {
-  _allPubs = pubs;
-  renderTabs("pub-tabs", categories, "all", renderPubsForCategory);
-  renderPubsForCategory("all");
 }
 
 // ---- Blog ---- //
@@ -484,7 +472,7 @@ $(document).ready(function () {
     fetchJSON("categories.json").then((categories) => {
       Promise.all([
         fetchJSON("projects.json").then((projects) => initProjects(categories, projects)),
-        fetchJSON("publications.json").then((pubs) => initPublications(categories, pubs)),
+        fetchJSON("publications.json").then(renderPublications),
       ]);
     });
 
