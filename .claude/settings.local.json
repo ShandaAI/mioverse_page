@@ -30,7 +30,8 @@
       "WebFetch(domain:api.github.com)",
       "WebFetch(domain:cdn.jsdelivr.net)",
       "WebFetch(domain:mp.weixin.qq.com)",
-      "WebFetch(domain:finance.sina.com.cn)"
+      "WebFetch(domain:finance.sina.com.cn)",
+      "WebFetch(domain:arxiv.org)"
     ]
   }
 }
