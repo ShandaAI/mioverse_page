@@ -2,8 +2,18 @@
   {
     "year": "2026 Jun",
     "venue": "CVPR2026",
+    "title": "FloodDiffusion: Tailored Diffusion Forcing for Streaming Motion Generation",
+    "authors": "Yiyi Cai, Yuhan Wu, Kunhang Li, You Zhou, Bo Zheng, Haiyang Liu",
+    "links": [
+      { "label": "PDF", "url": "https://arxiv.org/abs/2512.03520", "icon": "fas fa-file-pdf" },
+      { "label": "Project", "url": "https://shandaai.github.io/FloodDiffusion/", "icon": "fas fa-globe" }
+    ]
+  },
+  {
+    "year": "2026 Jun",
+    "venue": "CVPR2026",
     "title": "DyaDiT: A Multi-Modal Diffusion Transformer for Socially Favorable Dyadic Gesture Generation",
-    "authors": "Yichen Peng, Jyun-Ting Song, Siyeol Jung,  Ruofan Liu,  Haiyang Liu,  Xuangeng Chu,  Ruicong Liu, Erwin Wu, Hideki Koike, Kris Kitani",
+    "authors": "Yichen Peng, Jyun-Ting Song, Siyeol Jung, Ruofan Liu, Haiyang Liu, Xuangeng Chu, Ruicong Liu, Erwin Wu, Hideki Koike, Kris Kitani",
     "links": [
       { "label": "PDF", "url": "https://arxiv.org/abs/2602.23165", "icon": "fas fa-file-pdf" }
     ]
