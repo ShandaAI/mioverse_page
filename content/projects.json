@@ -43,11 +43,11 @@
     "featured": false,
     "title": "Talker — Expressive Speech Synthesis",
     "authors": "",
-    "description": "Fine-grained emotion and prosody control for natural-sounding voice aligned with personality and conversational context.",
-    "image": "",
+    "description": "Fine-grained voice and emotion cloning for natural-sounding speech synthesis, achieving state-of-the-art performance in Japanese.",
+    "image": "static/images/kodama-tts.jpg",
     "video": "",
     "links": [
-      { "label": "Demo", "url": "https://shandaai.github.io/Hive/", "icon": "fas fa-play" }
+      { "label": "Demo", "url": "https://kodama.amadeusu.com/", "icon": "fas fa-play" }
     ],
     "placeholderIcon": "fas fa-microphone-alt"
   },
