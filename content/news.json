@@ -10,6 +10,11 @@
     "text": "Four papers are accepted to <a href='https://cvpr.thecvf.com/' target='_blank'>CVPR2026</a>!"
   },
   {
+    "date": "2026.02",
+    "badge": "release",
+    "text": "Released the <a href='https://shandaai.github.io/Hive/' target='_blank'>Hive dataset</a> — a 2k-hour high-quality synthetic audio dataset with noise-free segments from unconstrained recordings."
+  },
+  {
     "date": "2026.12",
     "badge": "paper",
     "text": "One paper is accepted to <a href='https://dl.acm.org/journal/imwut' target='_blank'>IMWUT 2026</a>!"
