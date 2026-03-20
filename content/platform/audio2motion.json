@@ -1,0 +1,47 @@
+{
+  "id": "audio2motion",
+  "tab": {
+    "icon": "fas fa-music",
+    "label": "Motion & Expression Synthesis",
+    "bold": "Text-to-motion & audio-to-expression.",
+    "desc": "Generate body actions from text and facial expressions from audio."
+  },
+  "panel": {
+    "badge": "Motion & Expression Synthesis",
+    "headline": "Text to<br><span class=\"gradient-headline\">motion</span>, audio to<br><span class=\"gradient-headline\">expression</span>.",
+    "description": "Flood Diffusion generates realistic body motions from text descriptions. UniLS synthesizes lifelike facial expressions driven by audio input.",
+    "buttons": [
+      { "text": "Learn more about Flood Diffusion", "link": "https://shandaai.github.io/FloodDiffusion/" },
+      { "text": "Learn more about UniLS", "link": "https://xg-chu.site/project_unils/" }
+    ],
+    "background": {
+      "type": "video-grid-grouped",
+      "groups": [
+        {
+          "title": "Flood Diffusion — Text to Motion",
+          "columns": 4,
+          "videos": [
+            { "src": "static/videos/motion_expression_assets/flood_block_attack_3_counter_punch_3_step_back_3_captioned.mp4" },
+            { "src": "static/videos/motion_expression_assets/flood_breakdance_6_freeze_3_stand_up_4_captioned.mp4" },
+            { "src": "static/videos/motion_expression_assets/flood_crawl_forward_5_stand_up_3_walk_4_captioned.mp4" },
+            { "src": "static/videos/motion_expression_assets/flood_punch_forward_3_dodge_3_kick_3_captioned.mp4" },
+            { "src": "static/videos/motion_expression_assets/flood_walk_in_circle_6_sit_down_2_stand_up_4_captioned.mp4" },
+            { "src": "static/videos/motion_expression_assets/flood_video_2_captioned.mp4" },
+            { "src": "static/videos/motion_expression_assets/flood_video_3_captioned.mp4" },
+            { "src": "static/videos/motion_expression_assets/flood_video_4_captioned.mp4" }
+          ]
+        },
+        {
+          "title": "UniLS — Audio to Expression",
+          "columns": 4,
+          "videos": [
+            { "src": "static/videos/motion_expression_assets/unils_11.mp4" },
+            { "src": "static/videos/motion_expression_assets/unils_12.mp4" },
+            { "src": "static/videos/motion_expression_assets/unils_13.mp4" },
+            { "src": "static/videos/motion_expression_assets/unils_14.mp4" }
+          ]
+        }
+      ]
+    }
+  }
+}

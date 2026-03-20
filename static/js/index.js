@@ -355,7 +355,7 @@ $(document).ready(function () {
 
   // Platform page — load products from JSON, render tabs & panels
   if (PAGE === "platform") {
-    var productFiles = ["digital-human.json", "tts.json", "world-model.json"];
+    var productFiles = ["digital-human.json", "tts.json", "world-model.json", "audio2motion.json"];
     var defaultProduct = "world-model";
 
     Promise.all(productFiles.map(function (f) {
@@ -400,6 +400,34 @@ $(document).ready(function () {
               '</div>';
             }).join("") +
           '</div>';
+        } else if (p.panel.background.type === "video-grid" && p.panel.background.videos) {
+          bgHtml = '<div class="video-grid">' +
+            p.panel.background.videos.map(function (v) {
+              return '<div class="video-grid-item">' +
+                '<video loop muted playsinline autoplay>' +
+                  '<source src="' + v.src + '" type="video/mp4">' +
+                '</video>' +
+                (v.caption ? '<span class="video-grid-caption">' + escapeHtml(v.caption) + '</span>' : '') +
+              '</div>';
+            }).join("") +
+          '</div>';
+        } else if (p.panel.background.type === "video-grid-grouped" && p.panel.background.groups) {
+          bgHtml = '<div class="video-grid-grouped">' +
+            p.panel.background.groups.map(function (g) {
+              return '<div class="video-grid-group">' +
+                '<h3 class="video-grid-group-title">' + escapeHtml(g.title) + '</h3>' +
+                '<div class="video-grid' + (g.columns ? ' video-grid-cols-' + g.columns : '') + '">' +
+                  g.videos.map(function (v) {
+                    return '<div class="video-grid-item">' +
+                      '<video loop muted playsinline autoplay>' +
+                        '<source src="' + v.src + '" type="video/mp4">' +
+                      '</video>' +
+                    '</div>';
+                  }).join("") +
+                '</div>' +
+              '</div>';
+            }).join("") +
+          '</div>';
         } else {
           bgHtml = '<div class="platform-panel-placeholder"><i class="' + (p.panel.background.icon || "fas fa-flask") + '"></i></div>';
         }
@@ -411,9 +439,14 @@ $(document).ready(function () {
               '<span class="platform-panel-badge">' + escapeHtml(p.panel.badge) + '</span>' +
               '<h2 class="platform-panel-headline">' + p.panel.headline + '</h2>' +
               '<p class="platform-panel-desc">' + escapeHtml(p.panel.description) + '</p>' +
-              '<a href="' + p.panel.buttonLink + '" class="button is-medium is-rounded home-btn-secondary">' +
-                escapeHtml(p.panel.buttonText) + '&ensp;<i class="fas fa-arrow-right"></i>' +
-              '</a>' +
+              (p.panel.buttons
+                ? p.panel.buttons.map(function (b) {
+                    return '<a href="' + b.link + '" class="button is-medium is-rounded home-btn-secondary">' +
+                      escapeHtml(b.text) + '&ensp;<i class="fas fa-arrow-right"></i></a>';
+                  }).join("")
+                : '<a href="' + p.panel.buttonLink + '" class="button is-medium is-rounded home-btn-secondary">' +
+                    escapeHtml(p.panel.buttonText) + '&ensp;<i class="fas fa-arrow-right"></i></a>'
+              ) +
             '</div>' +
           '</div>' +
         '</div>';
