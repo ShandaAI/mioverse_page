@@ -8,7 +8,7 @@
   },
   "panel": {
     "badge": "Motion & Expression Synthesis",
-    "headline": "Text to<br><span class=\"gradient-headline\">motion</span>, audio to<br><span class=\"gradient-headline\">expression</span>.",
+    "headline": "Text to <span class=\"gradient-headline\">motion</span>.<br>Audio to <span class=\"gradient-headline\">expression</span>.",
     "description": "Flood Diffusion generates realistic body motions from text descriptions. UniLS synthesizes lifelike facial expressions driven by audio input.",
     "buttons": [
       { "text": "Learn more about Flood Diffusion", "link": "https://shandaai.github.io/FloodDiffusion/" },

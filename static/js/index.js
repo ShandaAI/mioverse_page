@@ -356,7 +356,7 @@ $(document).ready(function () {
   // Platform page — load products from JSON, render tabs & panels
   if (PAGE === "platform") {
     var productFiles = ["digital-human.json", "tts.json", "world-model.json", "audio2motion.json"];
-    var defaultProduct = "world-model";
+    var defaultProduct = "audio2motion";
 
     Promise.all(productFiles.map(function (f) {
       return fetch(CONTENT_BASE + "/platform/" + f).then(function (r) { return r.json(); });
