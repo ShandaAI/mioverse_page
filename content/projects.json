@@ -54,10 +54,23 @@
   {
     "category": "digital-human",
     "featured": false,
+    "title": "Facial Animator — Fine-grained Facial Animation Synthesis",
+    "authors": "",
+    "description": "UniLS generates realistic, dual-track audio-driven expressions for both speakers and listeners; this work is part of the MIO: Towards Interactive Intelligence for Digital Humans project.",
+    "image": "static/images/unils.png",
+    "video": "",
+    "links": [
+      { "label": "Project", "url": "https://xg-chu.site/project_unils/", "icon": "fas fa-external-link-alt" }
+    ],
+    "placeholderIcon": "fas fa-face"
+  },
+  {
+    "category": "digital-human",
+    "featured": false,
     "title": "Body Animator — Co-speech Gesture Synthesis",
     "authors": "",
     "description": "Full-body gesture synthesis with co-speech gestures, posture shifts, and reactive body language driven by context.",
-    "image": "",
+    "image": "static/images/flooddiffusion.png",
     "video": "",
     "links": [
       { "label": "Project", "url": "https://shandaai.github.io/FloodDiffusion/", "icon": "fas fa-external-link-alt" }

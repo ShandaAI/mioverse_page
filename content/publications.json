@@ -12,6 +12,16 @@
   {
     "year": "2026 Jun",
     "venue": "CVPR2026",
+    "title": "UniLS: End-to-End Audio-Driven Avatars for Unified Listening and Speaking",
+    "authors": "Xuangeng Chu*, Ruicong Liu*, Yifei Huang, Yun Liu, Yichen Peng, Bo Zheng",
+    "links": [
+      { "label": "PDF", "url": "https://arxiv.org/abs/2512.09327", "icon": "fas fa-file-pdf" },
+      { "label": "Project", "url": "https://xg-chu.site/project_unils/", "icon": "fas fa-globe" }
+    ]
+  },
+  {
+    "year": "2026 Jun",
+    "venue": "CVPR2026",
     "title": "DyaDiT: A Multi-Modal Diffusion Transformer for Socially Favorable Dyadic Gesture Generation",
     "authors": "Yichen Peng, Jyun-Ting Song, Siyeol Jung, Ruofan Liu, Haiyang Liu, Xuangeng Chu, Ruicong Liu, Erwin Wu, Hideki Koike, Kris Kitani",
     "links": [
