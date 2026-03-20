@@ -60,6 +60,7 @@
     "image": "static/images/unils.png",
     "video": "",
     "links": [
+      { "label": "Paper", "url": "https://arxiv.org/abs/2512.09327", "icon": "fas fa-file-alt" },
       { "label": "Project", "url": "https://xg-chu.site/project_unils/", "icon": "fas fa-external-link-alt" }
     ],
     "placeholderIcon": "fas fa-face"
@@ -73,6 +74,7 @@
     "image": "static/images/flooddiffusion.png",
     "video": "",
     "links": [
+      { "label": "Paper", "url": "https://arxiv.org/abs/2512.03520", "icon": "fas fa-file-alt" },
       { "label": "Project", "url": "https://shandaai.github.io/FloodDiffusion/", "icon": "fas fa-external-link-alt" }
     ],
     "placeholderIcon": "fas fa-running"
