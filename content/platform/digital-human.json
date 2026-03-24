@@ -3,8 +3,8 @@
   "tab": {
     "icon": "fas fa-user-astronaut",
     "label": "Live Digital Human",
-    "bold": "Real-time autonomous avatar.",
-    "desc": "Speech, emotion, and motion synthesis powered by M.I.O framework."
+    "bold": "Lifelike digital companions.",
+    "desc": "Real-time interaction powered by M.I.O. framework."
   },
   "panel": {
     "badge": "Live Digital Human",
