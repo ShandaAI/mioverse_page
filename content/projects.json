@@ -28,10 +28,10 @@
   {
     "category": "digital-human",
     "featured": false,
-    "title": "Thinker — LLM-Powered Cognitive Engine",
+    "title": "Thinker — Self-Evolving Narrative Intelligence",
     "authors": "",
-    "description": "Personality modeling, long-term memory, and emotional reasoning that drives entire avatar behavior with consistent personality across interactions.",
-    "image": "",
+    "description": "Novel-to-Agent transforms static novel text into dynamic, long-term memory for conversational characters by building comprehensive event timelines and evolving personas; this work is part of the MIO: Towards Interactive Intelligence for Digital Humans project.",
+    "image": "static/images/livingnovel.png",
     "video": "",
     "links": [
       { "label": "Demo", "url": "https://app--novel-chat-dbcf99d8.base44.app/", "icon": "fas fa-play" }
