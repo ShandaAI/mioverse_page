@@ -1238,6 +1238,23 @@ html {
   text-align: center;
 }
 
+.platform-panel-buttons {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.platform-panel-buttons .home-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+}
+
+.platform-panel-buttons .home-btn-secondary svg {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: middle;
+}
+
 .platform-panel-badge {
   display: inline-block;
   font-size: 0.8rem;
@@ -1296,6 +1313,10 @@ html {
 
   .platform-panel-headline {
     font-size: 2rem;
+  }
+
+  .platform-panel-buttons {
+    justify-content: center;
   }
 }
 

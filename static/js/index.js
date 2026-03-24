@@ -440,10 +440,11 @@ $(document).ready(function () {
               '<h2 class="platform-panel-headline">' + p.panel.headline + '</h2>' +
               '<p class="platform-panel-desc">' + escapeHtml(p.panel.description) + '</p>' +
               (p.panel.buttons
-                ? p.panel.buttons.map(function (b) {
-                    return '<a href="' + b.link + '" class="button is-medium is-rounded home-btn-secondary">' +
-                      escapeHtml(b.text) + '&ensp;<i class="fas fa-arrow-right"></i></a>';
-                  }).join("")
+                ? '<div class="platform-panel-buttons">' + p.panel.buttons.map(function (b) {
+                    var iconHtml = b.iconSvg ? b.iconSvg : '<i class="' + (b.icon || 'fas fa-arrow-right') + '"></i>';
+                    return '<a href="' + b.link + '" class="button is-medium is-rounded home-btn-secondary" target="_blank" rel="noopener">' +
+                      iconHtml + '&ensp;' + escapeHtml(b.text) + '</a>';
+                  }).join("") + '</div>'
                 : '<a href="' + p.panel.buttonLink + '" class="button is-medium is-rounded home-btn-secondary">' +
                     escapeHtml(p.panel.buttonText) + '&ensp;<i class="fas fa-arrow-right"></i></a>'
               ) +
