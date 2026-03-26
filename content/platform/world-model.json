@@ -4,13 +4,13 @@
     "icon": "fas fa-globe-asia",
     "label": "Interactive World Model",
     "bold": "AI-generated virtual worlds.",
-    "desc": "Explorable 3D environments from neural world representations."
+    "desc": "Build explorable and interactive worlds."
   },
   "panel": {
     "badge": "Interactive World Model",
-    "headline": "Explore<br><span class=\"gradient-headline\">AI-generated worlds</span><br>— Project Sekai.",
-    "description": "Immersive 3D environments built from neural scene understanding. Walk through AI-generated virtual spaces in real time.",
-    "buttonText": "Try now!",
+    "headline": "Explore<br><span class=\"gradient-headline\">AI-generated worlds</span><br>.",
+    "description": "Immersive experience with diverse interaction in real time.",
+    "buttonText": "Coming soon",
     "buttonLink": "research.html",
     "background": {
       "type": "hls",
