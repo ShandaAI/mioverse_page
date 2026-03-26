@@ -1,6 +1,11 @@
 [
   {
     "date": "2026.03",
+    "badge": "paper",
+    "text": "<a href='https://shandaai.github.io/wildworld-project/' target='_blank'>WildWorld</a> — a Large-Scale Dataset for Dynamic World Modeling with Actions and Explicit State toward Generative ARPG."
+  },
+  {
+    "date": "2026.03",
     "badge": "announcement",
     "text": "Live M.I.O. has officially debuted as an AI VTuber on Bilibili and YouTube—come tune in and say hi on our <a href='https://space.bilibili.com/3706946983037274' target='_blank'>Bilibili channel</a>!"
   },
