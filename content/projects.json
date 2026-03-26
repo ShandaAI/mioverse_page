@@ -15,13 +15,13 @@
   {
     "category": "world-model",
     "featured": true,
-    "title": "Sekai — Interactive World Model",
+    "title": "Coming soon — Interactive World Model",
     "authors": "",
-    "description": "Generate and explore AI-created virtual worlds with text control, real-time navigation, and long-context visual coherence. Built on a DiT-based diffusion architecture with bidirectional attention distillation, Sekai achieves 24fps real-time generation at 720p with 10s+ coherent context windows. Supports three interaction modes: Text-to-World generation, Image-to-World extension, and dynamic Event Editing.",
-    "image": "static/images/world_model.svg",
+    "description": "Generate and explore AI-created virtual worlds with 720P@24 FPS real-time navigation and interaction.",
+    "image": "",
     "video": "",
     "links": [
-      { "label": "Project Page", "url": "https://shanda-ai.github.io/sekai/", "icon": "fas fa-external-link-alt" },
+      { "label": "Project Page", "url": "", "icon": "fas fa-external-link-alt" },
       { "label": "Demo", "url": "#demo-sekai", "icon": "fas fa-play-circle" }
     ]
   },
