@@ -82,9 +82,9 @@
   {
     "category": "world-model",
     "featured": false,
-    "title": "Text-to-World Generation",
+    "title": "WildWorld",
     "authors": "",
-    "description": "Describe any environment in natural language and generate a fully explorable 3D-like world with WASD free navigation through AI-imagined landscapes.",
+    "description": "A large-scale dataset for dynamic world modeling with actions and explicit state toward generative ARPG.",
     "image": "",
     "video": "",
     "links": [],
@@ -94,25 +94,13 @@
   {
     "category": "world-model",
     "featured": false,
-    "title": "Image-to-World Extension",
+    "title": "Pack Forcing",
     "authors": "",
-    "description": "Provide a reference image and extend it into a navigable environment, maintaining visual style and spatial coherence during exploration.",
+    "description": "An autoregressive video diffusion model with long-term memory and temporally coherent.",
     "image": "",
     "video": "",
     "links": [],
     "comingSoon": true,
     "placeholderIcon": "fas fa-image"
   },
-  {
-    "category": "world-model",
-    "featured": false,
-    "title": "Event Editing — Dynamic World Modification",
-    "authors": "",
-    "description": "Dynamically modify worlds mid-exploration via text commands — change weather, time of day, add objects, trigger events while maintaining visual continuity.",
-    "image": "",
-    "video": "",
-    "links": [],
-    "comingSoon": true,
-    "placeholderIcon": "fas fa-magic"
-  }
 ]
