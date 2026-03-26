@@ -2,13 +2,13 @@
   "id": "digital-human",
   "tab": {
     "icon": "fas fa-user-astronaut",
-    "label": "Live Digital Human",
+    "label": "M.I.O Live",
     "bold": "Lifelike digital companions.",
-    "desc": "Real-time interaction powered by M.I.O. framework."
+    "desc": "Real-time interaction powered by M.I.O framework."
   },
   "panel": {
-    "badge": "Live Digital Human",
-    "headline": "Beyond Avatars:<br><span class=\"gradient-headline\">Lifelike Digital Companions</span><br>— powered by M.I.O.",
+    "badge": "M.I.O Live",
+    "headline": "Beyond Avatars:<br><span class=\"gradient-headline\">Lifelike Digital Companions</span><br>— powered by M.I.O",
     "description": "Real-time interaction, ultra-realistic rendering, and fluid animations, all driven by one unified framework. Meet Mio in our live channel, a lifelike digital companion who sees, listens, and responds naturally.",
     "buttons": [
       {

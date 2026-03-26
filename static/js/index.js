@@ -11,7 +11,7 @@ const PAGE = (function () {
   const path = window.location.pathname.split("/").pop() || "index.html";
   if (path === "" || path === "index.html") return "home";
   if (path === "research.html") return "research";
-  if (path === "platform.html") return "platform";
+  if (path === "solutions.html") return "platform";
   if (path === "blog.html") return "blog";
   return "home";
 })();
@@ -324,7 +324,7 @@ function closeBlog() {
 
 function highlightActiveNav() {
   const navLinks = document.querySelectorAll(".navbar-end .navbar-item:not(.contact-btn)");
-  const pageMap = { home: "index.html", research: "research.html", platform: "platform.html", blog: "blog.html" };
+  const pageMap = { home: "index.html", research: "research.html", platform: "solutions.html", blog: "blog.html" };
   const target = pageMap[PAGE];
 
   navLinks.forEach((link) => {
@@ -356,7 +356,7 @@ $(document).ready(function () {
   // Platform page — load products from JSON, render tabs & panels
   if (PAGE === "platform") {
     var productFiles = ["digital-human.json", "tts.json", "world-model.json", "audio2motion.json"];
-    var defaultProduct = "audio2motion";
+    var defaultProduct = "digital-human";
 
     Promise.all(productFiles.map(function (f) {
       return fetch(CONTENT_BASE + "/platform/" + f).then(function (r) { return r.json(); });

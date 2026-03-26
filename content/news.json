@@ -2,22 +2,17 @@
   {
     "date": "2026.03",
     "badge": "announcement",
-    "text": "MioVerse.ai platform launched, with live demos and research platforms for trial! Unifying Digital Human and Interactive World Models under one research umbrella."
+    "text": "Live M.I.O. has officially debuted as an AI VTuber on Bilibili and Youtube—come tune in and say hi in <a href='https://space.bilibili.com/3706946983037274' target='_blank'>our Bilibili channel</a>!"
   },
   {
     "date": "2026.02",
     "badge": "paper",
-    "text": "Four papers are accepted to <a href='https://cvpr.thecvf.com/' target='_blank'>CVPR2026</a>!"
+    "text": "Eight papers are accepted to <a href='https://cvpr.thecvf.com/' target='_blank'>CVPR2026</a>!"
   },
   {
     "date": "2026.02",
     "badge": "release",
     "text": "Released the <a href='https://shandaai.github.io/Hive/' target='_blank'>Hive dataset</a> — a 2k-hour high-quality synthetic audio dataset with noise-free segments from unconstrained recordings."
-  },
-  {
-    "date": "2026.12",
-    "badge": "paper",
-    "text": "One paper is accepted to <a href='https://dl.acm.org/journal/imwut' target='_blank'>IMWUT 2026</a>!"
   },
   {
     "date": "2025.12",
