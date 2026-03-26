@@ -89,7 +89,7 @@
     "video": "",
     "links": [],
     "comingSoon": true,
-    "placeholderIcon": "fas fa-keyboard"
+    "placeholderIcon": "fas fa-image"
   },
   {
     "category": "world-model",
@@ -103,4 +103,16 @@
     "comingSoon": true,
     "placeholderIcon": "fas fa-image"
   },
+  {
+    "category": "world-model",
+    "featured": false,
+    "title": "Coming soon",
+    "authors": "",
+    "description": "",
+    "image": "",
+    "video": "",
+    "links": [],
+    "comingSoon": true,
+    "placeholderIcon": "fas fa-image"
+  }
 ]
