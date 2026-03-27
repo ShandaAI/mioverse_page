@@ -91,6 +91,7 @@ body {
 .hero.is-fullheight-with-navbar {
   background: var(--dark-bg);
   min-height: calc(100vh - 4.5rem);
+  margin-top: 4.5rem;
 }
 
 .hero-body {
