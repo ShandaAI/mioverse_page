@@ -13,6 +13,7 @@ const PAGE = (function () {
   if (path === "research.html") return "research";
   if (path === "solutions.html") return "platform";
   if (path === "blog.html") return "blog";
+  if (path === "career.html") return "career";
   return "home";
 })();
 
@@ -324,7 +325,7 @@ function closeBlog() {
 
 function highlightActiveNav() {
   const navLinks = document.querySelectorAll(".navbar-end .navbar-item:not(.contact-btn)");
-  const pageMap = { home: "index.html", research: "research.html", platform: "solutions.html", blog: "blog.html" };
+  const pageMap = { home: "index.html", research: "research.html", platform: "solutions.html", blog: "blog.html", career: "career.html" };
   const target = pageMap[PAGE];
 
   navLinks.forEach((link) => {
@@ -563,4 +564,114 @@ $(document).ready(function () {
       if (e.key === "Escape") closeBlog();
     });
   }
+
+  // Career page — load team JDs from content/career/*.json
+  if (PAGE === "career") {
+    var careerTeamFiles = ["speech-ai.json"];
+
+    Promise.all(
+      careerTeamFiles.map(function (f) { return fetchJSON("career/" + f); })
+    ).then(function (teams) {
+      var container = document.getElementById("career-teams");
+      if (container) container.innerHTML = teams.map(renderCareerTeam).join("");
+    }).catch(function (err) { console.error("Failed to load career:", err); });
+  }
 });
+
+// ---- Career rendering ---- //
+
+function renderCareerTeam(team) {
+  var sectionsHtml = (team.sections || []).map(renderCareerTeamSection).join("");
+  var rolesHeading = team.rolesHeading || { en: "Open Roles", zh: "开放岗位" };
+  var rolesHtml = (team.roles || []).map(renderCareerRole).join("");
+
+  return [
+    '<section class="career-team" id="team-' + team.id + '">',
+      '<header class="career-team-header">',
+        '<span class="career-team-tag lang-en">' + escapeHtml(team.tag.en) + '</span>',
+        '<span class="career-team-tag lang-zh">' + escapeHtml(team.tag.zh) + '</span>',
+        '<h3 class="career-team-name lang-en">' + escapeHtml(team.name.en) + '</h3>',
+        '<h3 class="career-team-name lang-zh">' + escapeHtml(team.name.zh) + '</h3>',
+      '</header>',
+      '<p class="career-text lang-en">' + team.intro.en + '</p>',
+      '<p class="career-text lang-zh">' + team.intro.zh + '</p>',
+      sectionsHtml,
+      '<h4 class="career-team-subheading lang-en">' + escapeHtml(rolesHeading.en) + '</h4>',
+      '<h4 class="career-team-subheading lang-zh">' + escapeHtml(rolesHeading.zh) + '</h4>',
+      rolesHtml,
+    '</section>'
+  ].join("");
+}
+
+function renderCareerTeamSection(s) {
+  var heading =
+    '<h4 class="career-team-subheading lang-en">' + escapeHtml(s.title.en) + '</h4>' +
+    '<h4 class="career-team-subheading lang-zh">' + escapeHtml(s.title.zh) + '</h4>';
+  return heading + renderCareerSectionBody(s);
+}
+
+function renderCareerRoleSection(s) {
+  var heading =
+    '<h6 class="career-subheading lang-en">' + escapeHtml(s.title.en) + '</h6>' +
+    '<h6 class="career-subheading lang-zh">' + escapeHtml(s.title.zh) + '</h6>';
+  return heading + renderCareerSectionBody(s);
+}
+
+function renderCareerSectionBody(s) {
+  if (s.type === "paragraph") {
+    return (
+      '<p class="career-text lang-en">' + s.body.en + '</p>' +
+      '<p class="career-text lang-zh">' + s.body.zh + '</p>'
+    );
+  }
+  if (s.type === "list") {
+    return renderCareerList(s.items);
+  }
+  if (s.type === "paragraphList") {
+    return (
+      '<p class="career-text lang-en">' + s.intro.en + '</p>' +
+      '<p class="career-text lang-zh">' + s.intro.zh + '</p>' +
+      renderCareerList(s.items)
+    );
+  }
+  return "";
+}
+
+function renderCareerList(items) {
+  var enItems = items.map(function (i) { return "<li>" + i.en + "</li>"; }).join("");
+  var zhItems = items.map(function (i) { return "<li>" + i.zh + "</li>"; }).join("");
+  return (
+    '<ul class="career-list lang-en">' + enItems + "</ul>" +
+    '<ul class="career-list lang-zh">' + zhItems + "</ul>"
+  );
+}
+
+function renderCareerRole(role) {
+  var sep = "&nbsp;&nbsp;·&nbsp;&nbsp;";
+  var metaEn = (role.meta || []).map(function (m) {
+    return '<i class="fas ' + m.icon + '"></i>&nbsp;' + escapeHtml(m.label.en);
+  }).join(sep);
+  var metaZh = (role.meta || []).map(function (m) {
+    return '<i class="fas ' + m.icon + '"></i>&nbsp;' + escapeHtml(m.label.zh);
+  }).join(sep);
+
+  var sectionsHtml = (role.sections || []).map(renderCareerRoleSection).join("");
+  var subject = encodeURIComponent(role.applySubject || ("Applying for " + role.title.en));
+
+  return [
+    '<article class="career-role" id="' + role.id + '">',
+      '<span class="project-tag lang-en">' + escapeHtml(role.label.en) + '</span>',
+      '<span class="project-tag lang-zh">' + escapeHtml(role.label.zh) + '</span>',
+      '<h5 class="career-role-title lang-en">' + escapeHtml(role.title.en) + '</h5>',
+      '<h5 class="career-role-title lang-zh">' + escapeHtml(role.title.zh) + '</h5>',
+      '<p class="career-role-meta lang-en">' + metaEn + '</p>',
+      '<p class="career-role-meta lang-zh">' + metaZh + '</p>',
+      sectionsHtml,
+      '<div class="career-apply">',
+        '<a class="button is-medium is-link is-rounded" href="mailto:jp@shanda.com?subject=' + subject + '">',
+          '<i class="fas fa-envelope"></i>&nbsp;<span class="lang-en">Apply Now</span><span class="lang-zh">立即申请</span>',
+        '</a>',
+      '</div>',
+    '</article>'
+  ].join("");
+}
