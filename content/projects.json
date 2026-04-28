@@ -85,10 +85,13 @@
     "title": "WildWorld",
     "authors": "",
     "description": "A large-scale dataset for dynamic world modeling with actions and explicit state toward generative ARPG.",
-    "image": "",
+    "image": "https://cdn.jsdelivr.net/gh/ShandaAI/wildworld-project@0.1.0/static/images/qualitative_comparison_v2.png",
     "video": "",
-    "links": [],
-    "comingSoon": true,
+    "links": [
+      { "label": "Paper", "url": "https://arxiv.org/abs/2603.23497", "icon": "fas fa-file-alt" },
+      { "label": "Project", "url": "https://shandaai.github.io/wildworld-project/", "icon": "fas fa-external-link-alt" },
+      { "label": "Code", "url": "https://github.com/ShandaAI/WildWorld", "icon": "fab fa-github" }
+    ],
     "placeholderIcon": "fas fa-image"
   },
   {
@@ -96,23 +99,44 @@
     "featured": false,
     "title": "Pack Forcing",
     "authors": "",
-    "description": "An autoregressive video diffusion model with long-term memory and temporally coherent.",
-    "image": "",
+    "description": "An autoregressive video diffusion model with long-term memory; short video training suffices for long video sampling and long-context inference.",
+    "image": "https://cdn.jsdelivr.net/gh/ShandaAI/PackForcing@main/assets/c2cc6abde8b8de5bb3a82681cb840492.jpg",
     "video": "",
-    "links": [],
-    "comingSoon": true,
+    "links": [
+      { "label": "Paper", "url": "https://arxiv.org/abs/2603.25730", "icon": "fas fa-file-alt" },
+      { "label": "Code", "url": "https://github.com/ShandaAI/PackForcing", "icon": "fab fa-github" }
+    ],
     "placeholderIcon": "fas fa-image"
   },
   {
     "category": "world-model",
     "featured": false,
-    "title": "Coming soon",
+    "title": "WorldMark",
     "authors": "",
-    "description": "",
-    "image": "",
+    "description": "A unified benchmark suite for interactive video world models, with standardized evaluation across six major models and 500 evaluation cases.",
+    "image": "https://alaya-studio.github.io/WorldMark/static/images/teaser.png",
     "video": "",
-    "links": [],
-    "comingSoon": true,
+    "links": [
+      { "label": "Paper", "url": "https://arxiv.org/abs/2604.21686", "icon": "fas fa-file-alt" },
+      { "label": "Project", "url": "https://alaya-studio.github.io/WorldMark/", "icon": "fas fa-external-link-alt" },
+      { "label": "Arena", "url": "https://warena.ai/", "icon": "fas fa-play-circle" }
+    ],
+    "placeholderIcon": "fas fa-image"
+  },
+  {
+    "category": "world-model",
+    "featured": false,
+    "title": "Generative World Renderer",
+    "authors": "",
+    "description": "A large-scale dataset curated from game engines with 4M+ frames and synchronized G-buffers, scaling generative inverse rendering to complex dynamic scenes.",
+    "image": "https://cdn.jsdelivr.net/gh/ShandaAI/AlayaRenderer@master/assets/teaser.png",
+    "video": "",
+    "links": [
+      { "label": "Paper", "url": "https://arxiv.org/abs/2604.02329", "icon": "fas fa-file-alt" },
+      { "label": "Project", "url": "https://alaya-studio.github.io/renderer/", "icon": "fas fa-external-link-alt" },
+      { "label": "Code", "url": "https://github.com/ShandaAI/AlayaRenderer", "icon": "fab fa-github" },
+      { "label": "Demo", "url": "https://huggingface.co/spaces/Brian9999/game-editing", "icon": "fas fa-play-circle" }
+    ],
     "placeholderIcon": "fas fa-image"
   }
 ]
