@@ -1,0 +1,187 @@
+{
+  "id": "speech-ai",
+  "name": {
+    "en": "Speech & Audio AI",
+    "zh": "语音与音频 AI"
+  },
+  "tag": {
+    "en": "Team",
+    "zh": "团队"
+  },
+  "intro": {
+    "en": "Shanda AI Research Tokyo is the Tokyo-based research arm of the Shanda Group, dedicated to pushing the boundaries of speech and audio intelligence. We are building the voice layer for the next era of human-AI interaction — from expressive game characters to empathetic digital companions.",
+    "zh": "盛大 AI 东京研究院是盛大集团旗下设立在东京的研究机构，致力于推动语音与音频智能的前沿探索。我们正在为人机交互的下一个时代构建「声音层」—— 从富有表现力的游戏角色到具有共情能力的数字人。"
+  },
+  "sections": [
+    {
+      "id": "why-join",
+      "title": { "en": "Why Join Us", "zh": "为什么加入我们" },
+      "type": "paragraph",
+      "body": {
+        "en": "The speech AI landscape is undergoing a paradigm shift. Large language models are gaining the ability to listen and speak; discrete speech tokens are replacing handcrafted acoustic features; and real-time, emotion-aware synthesis is becoming table stakes for next-generation applications. We believe the next breakthrough in human-AI interaction will be defined by voice — not just what AI says, but how it says it. The roles below put you at the center of that transformation.",
+        "zh": "语音 AI 正经历范式级变革：大语言模型开始具备听说能力，离散语音 Token 正在取代手工声学特征，实时情感合成正成为下一代应用的基础能力。我们相信，人机交互的下一次飞跃将由「声音」定义 —— 不仅是 AI 说什么，更是它怎么说。以下岗位都将让你站在这场变革的最前沿。"
+      }
+    },
+    {
+      "id": "what-we-offer",
+      "title": { "en": "What We Offer", "zh": "我们提供" },
+      "type": "list",
+      "items": [
+        {
+          "en": "A focused, research-first team where your ideas ship to production and reach real users",
+          "zh": "一支专注、研究优先的团队 —— 你的想法将落地产品并触达真实用户"
+        },
+        {
+          "en": "Dedicated GPU cluster for large-scale experiments — no fighting for compute",
+          "zh": "专用 GPU 集群支持大规模实验 —— 无需排队抢算力"
+        },
+        {
+          "en": "Freedom to publish and engage with the open research community",
+          "zh": "自由发表论文并参与开放学术社区"
+        },
+        {
+          "en": "Competitive compensation and visa sponsorship for international candidates",
+          "zh": "有竞争力的薪酬及海外候选人签证支持"
+        }
+      ]
+    }
+  ],
+  "rolesHeading": { "en": "Open Roles", "zh": "开放岗位" },
+  "roles": [
+    {
+      "id": "role-research-scientist",
+      "label": { "en": "Role 1", "zh": "岗位一" },
+      "title": {
+        "en": "Senior Research Scientist / Research Engineer",
+        "zh": "高级研究科学家 / 研究工程师"
+      },
+      "meta": [
+        { "icon": "fa-briefcase", "label": { "en": "Full-time", "zh": "全职" } },
+        { "icon": "fa-map-marker-alt", "label": { "en": "Tokyo", "zh": "东京" } }
+      ],
+      "applySubject": "Applying for Senior Research Scientist / Research Engineer",
+      "sections": [
+        {
+          "title": { "en": "Responsibilities", "zh": "岗位职责" },
+          "type": "list",
+          "items": [
+            {
+              "en": "<strong>End-to-end speech model R&amp;D:</strong> Design, implement, and iterate on state-of-the-art ASR, TTS, neural vocoders, and audio codec models. Own the full research-to-production pipeline — from architecture design and distributed training to deployment-ready inference optimization.",
+              "zh": "<strong>端到端语音模型研发：</strong>设计、实现并持续迭代最先进的 ASR/TTS、神经声码器和音频编码模型。全权负责从架构设计、分布式训练到部署级推理优化的完整流程。"
+            },
+            {
+              "en": "<strong>Emotion-aware &amp; style-controllable synthesis:</strong> Build speech synthesis systems with nuanced emotion expression and fine-grained style control. Develop emotion/paralinguistic annotation pipelines and leverage post-training strategies (reward modeling, GRPO) to achieve natural, human-like expressiveness.",
+              "zh": "<strong>情感感知与风格可控合成：</strong>构建具备细腻情感表达和精细风格控制的语音合成系统。开发情感/副语言标注流水线，结合后训练策略（奖励建模、GRPO）实现自然拟人的表现力。"
+            },
+            {
+              "en": "<strong>Speech tokenization &amp; speech LLMs:</strong> Explore discrete speech representations, speech-text multimodal modeling, and the integration of speech capabilities into LLMs. Investigate masked diffusion, flow matching, and autoregressive token prediction for next-generation audio generation.",
+              "zh": "<strong>语音 Token 化与 Speech LLM：</strong>探索离散语音表示、语音-文本多模态建模，以及将语音能力整合进 LLM 的路径。研究掩码扩散、Flow Matching、自回归 Token 预测等新兴范式。"
+            },
+            {
+              "en": "<strong>Multimodal audio-visual modeling:</strong> Extend speech AI into the audio-visual domain — talking-head generation, lip-sync avatars, and interactive digital humans that bridge voice synthesis with visual generation.",
+              "zh": "<strong>多模态音视频建模：</strong>将语音 AI 拓展至音视频领域 —— 说话人头像生成、唇形同步数字人和交互式虚拟人，打通语音合成与视觉生成。"
+            },
+            {
+              "en": "<strong>Academic impact:</strong> Publish at top-tier venues (Interspeech, ICASSP, ACL, NeurIPS, ICLR). Contribute arXiv preprints, release open-source models, and engage with the broader research community.",
+              "zh": "<strong>学术影响力：</strong>在顶级会议（Interspeech、ICASSP、ACL、NeurIPS、ICLR）发表成果，发布 arXiv 预印本与开源模型，积极参与学术社区交流。"
+            }
+          ]
+        },
+        {
+          "title": { "en": "Qualifications", "zh": "任职要求" },
+          "type": "list",
+          "items": [
+            {
+              "en": "<strong>Education:</strong> Master’s or Ph.D. in speech processing, EE, CS, ML, or a related field. We value demonstrated research ability over specific credentials; exceptional candidates with strong publications or industry track records are welcome.",
+              "zh": "<strong>学历：</strong>语音处理、电子工程、计算机科学、机器学习或相关领域的硕士/博士。相比学历本身，我们更看重已被验证的研究能力；具备优秀论文或工业经历的候选人同样欢迎。"
+            },
+            {
+              "en": "<strong>Core expertise:</strong> Solid hands-on experience in TTS, ASR, voice conversion, neural vocoding, or audio generation. Familiarity with modern architectures (Transformers, diffusion models, flow matching, codec-based systems) is strongly preferred.",
+              "zh": "<strong>核心能力：</strong>在 TTS、ASR、语音转换、神经声码器或音频生成方面有扎实实践经验。熟悉现代架构（Transformer、扩散模型、Flow Matching、Codec 系统）者优先。"
+            },
+            {
+              "en": "<strong>Engineering:</strong> Proficient in PyTorch (and/or JAX). Able to implement papers from scratch, debug complex training pipelines, and write clean experiment code. Experience with DeepSpeed/FSDP and CUDA optimization is a strong plus.",
+              "zh": "<strong>工程能力：</strong>精通 PyTorch（和/或 JAX），能从零实现论文并调试复杂训练流水线。有 DeepSpeed/FSDP 及 CUDA 优化经验者优先。"
+            },
+            {
+              "en": "<strong>Scale:</strong> Experience training models on large-scale audio datasets (tens of thousands of hours). Comfortable with the full data lifecycle — collection, cleaning, annotation, and quality-aware training.",
+              "zh": "<strong>规模化经验：</strong>有万小时级别音频数据训练经验，熟悉数据收集、清洗、标注到训练的完整流程。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "role-research-intern",
+      "label": { "en": "Role 2", "zh": "岗位二" },
+      "title": {
+        "en": "Research Intern",
+        "zh": "研究实习生"
+      },
+      "meta": [
+        { "icon": "fa-briefcase", "label": { "en": "Full-time or Part-time", "zh": "全职或兼职" } },
+        { "icon": "fa-clock", "label": { "en": "3–6 months", "zh": "3–6 个月" } },
+        { "icon": "fa-map-marker-alt", "label": { "en": "Tokyo", "zh": "东京" } }
+      ],
+      "applySubject": "Applying for Research Intern",
+      "sections": [
+        {
+          "title": { "en": "About the Internship", "zh": "关于实习" },
+          "type": "paragraph",
+          "body": {
+            "en": "As a research intern, you will work directly on frontier research topics with high publication potential. This is not a support role — you will lead independent research threads, run experiments on our dedicated GPU cluster, and target first-author or co-author publications at top conferences. You will receive close mentorship from experienced researchers while having the freedom to explore bold ideas.",
+            "zh": "作为研究实习生，你将直接参与具有高发表潜力的前沿课题。这不是辅助性岗位 —— 你将独立推进研究线程、在专用 GPU 集群上跑实验，并以顶会一作/共同作者论文为目标。你将获得资深研究员的密切指导，同时拥有探索大胆想法的空间。"
+          }
+        },
+        {
+          "title": { "en": "Research Directions", "zh": "研究方向" },
+          "type": "paragraphList",
+          "intro": {
+            "en": "You will focus on one or more of the following, depending on your interests and background:",
+            "zh": "你将根据兴趣和背景，聚焦以下方向中的一个或多个："
+          },
+          "items": [
+            {
+              "en": "<strong>Speech LLMs &amp; discrete audio modeling</strong> — integrating speech understanding and generation into LLMs via speech tokenization, masked diffusion, or autoregressive token prediction",
+              "zh": "<strong>Speech LLM 与离散音频建模</strong> —— 通过语音 Token 化、掩码扩散或自回归预测，将语音理解与生成能力整合进大语言模型"
+            },
+            {
+              "en": "<strong>Emotion-aware &amp; controllable synthesis</strong> — reward modeling, GRPO-based post-training, and large-scale paralinguistic annotation for expressive TTS",
+              "zh": "<strong>情感感知与可控合成</strong> —— 奖励建模、GRPO 后训练、大规模副语言标注，实现富有表现力的 TTS"
+            },
+            {
+              "en": "<strong>Multimodal audio-visual generation</strong> — talking-head synthesis, lip-sync avatars, and interactive digital humans",
+              "zh": "<strong>多模态音视频生成</strong> —— 说话人头像合成、唇形同步、交互式数字人"
+            },
+            {
+              "en": "<strong>Speech evaluation &amp; benchmarking</strong> — robust metrics and evaluation frameworks for long-form, emotion-rich speech generation",
+              "zh": "<strong>语音评测与基准构建</strong> —— 为长篇、情感丰富的语音生成开发稳健的评价指标与评测框架"
+            }
+          ]
+        },
+        {
+          "title": { "en": "Qualifications", "zh": "任职要求" },
+          "type": "list",
+          "items": [
+            {
+              "en": "Currently pursuing (or recently completed) a Master’s or Ph.D. in speech processing, CS, EE, ML, or a related field",
+              "zh": "正在攻读（或近期完成）语音处理、计算机科学、电子工程、机器学习或相关领域的硕士/博士学位"
+            },
+            {
+              "en": "Solid deep learning foundation with hands-on PyTorch experience (required)",
+              "zh": "深度学习基础扎实，具备 PyTorch 实践经验（必需）"
+            },
+            {
+              "en": "Familiarity with speech/audio models (TTS, ASR, vocoders, codecs) or generative models (diffusion, flow matching, autoregressive LMs)",
+              "zh": "熟悉语音/音频模型（TTS、ASR、声码器、Codec）或生成模型（扩散、Flow Matching、自回归 LM）"
+            },
+            {
+              "en": "Self-driven, comfortable reading and reproducing research papers independently",
+              "zh": "自驱力强，能独立阅读和复现论文"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

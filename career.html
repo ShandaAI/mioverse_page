@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1BN3C45ZS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-D1BN3C45ZS');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="description" content="Career | MioVerse.ai — Open positions at Shanda AI Research Tokyo.">
+  <meta property="og:title" content="Career | MioVerse.ai" />
+  <meta property="og:description" content="Open positions at Shanda AI Research Tokyo." />
+  <meta property="og:url" content="https://shanda-ai.github.io/" />
+  <meta property="og:image" content="static/images/teaser_1200x600.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="600" />
+  <meta name="twitter:title" content="Career | MioVerse.ai">
+  <meta name="twitter:description" content="Open positions at Shanda AI Research Tokyo.">
+  <meta name="twitter:image" content="static/images/teaser_1200x600.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Career | MioVerse.ai</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css?v=20260428">
+
+  <script>
+    // Apply saved language class before paint to avoid flash of wrong language.
+    (function () {
+      var stored = localStorage.getItem('career-lang');
+      var lang = stored === 'zh' ? 'zh' : 'en';
+      document.documentElement.classList.add('lang-' + lang);
+    })();
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/index.js?v=20260428"></script>
+</head>
+
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item nav-logo" href="index.html">
+          <img src="static/images/logo.svg" alt="MioVerse.ai" class="nav-logo-img">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNavbar">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="mainNavbar" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="index.html">Home</a>
+          <a class="navbar-item" href="research.html">Research</a>
+          <a class="navbar-item" href="solutions.html">Solutions</a>
+          <a class="navbar-item" href="blog.html">Blog</a>
+          <a class="navbar-item" href="career.html">Career</a>
+          <a class="navbar-item contact-btn" href="mailto:jp@shanda.com">
+            <i class="fas fa-envelope"></i>&nbsp;Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Career Hero (page-level, neutral) ===== -->
+  <section class="section career-hero">
+    <div class="career-hero-bg">
+      <img src="static/images/tokyo-office.jpg" alt="">
+    </div>
+    <div class="container is-max-desktop">
+      <div class="career-hero-top">
+        <span class="career-meta-pill">
+          <i class="fas fa-map-marker-alt"></i>&nbsp;Tokyo, Japan
+        </span>
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="zh">中文</button>
+        </div>
+      </div>
+      <h1 class="hero-title lang-en">Careers at <span class="gradient-headline">Shanda AI Research Tokyo</span></h1>
+      <h1 class="hero-title lang-zh">加入<span class="gradient-headline">盛大 AI 东京研究院</span></h1>
+      <p class="career-hero-subtitle lang-en">Open positions across our research teams. Build the next era of interactive intelligence with us.</p>
+      <p class="career-hero-subtitle lang-zh">我们的研究团队正在招募。与我们一起，构建人机交互的下一个时代。</p>
+    </div>
+  </section>
+
+  <!-- ===== Open Positions ===== -->
+  <section class="section section-alt" id="positions">
+    <div class="container is-max-desktop">
+      <h2 class="section-heading lang-en">Open Positions</h2>
+      <h2 class="section-heading lang-zh">开放岗位</h2>
+      <p class="section-subheading lang-en">Currently hiring on the teams below. Each team owns its own intro, perks, and roles.</p>
+      <p class="section-subheading lang-zh">以下团队正在招募。每个团队的简介、福利和岗位都自成一节。</p>
+
+      <!-- Teams (rendered from content/career/*.json by index.js).
+           To add a new JD: edit an existing team's `roles` array, or
+           add a new JSON file under content/career/ and register it
+           in `careerTeamFiles` inside static/js/index.js. -->
+      <div id="career-teams"></div>
+
+    </div>
+  </section>
+
+  <!-- ===== How to Apply (page-level, generic) ===== -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="section-heading lang-en">How to Apply</h2>
+      <h2 class="section-heading lang-zh">如何申请</h2>
+      <p class="career-text lang-en">For any role, send your CV, a brief research statement, and links to representative publications or projects to <a href="mailto:jp@shanda.com">jp@shanda.com</a>. Please indicate which role you are applying for in the subject line.</p>
+      <p class="career-text lang-zh">如有意申请，请将简历、简要研究陈述及代表性论文/项目链接发送至 <a href="mailto:jp@shanda.com">jp@shanda.com</a>。请在邮件标题中注明申请岗位。</p>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-4">
+          <p class="footer-brand">MioVerse.ai</p>
+          <p class="footer-tagline">Advancing interactive intelligence through digital humans and world models.</p>
+          <p class="footer-org">A research initiative by Shanda AI Research Tokyo</p>
+        </div>
+        <div class="column is-4">
+          <p class="footer-heading">Links</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="career.html">Career</a></li>
+          </ul>
+        </div>
+        <div class="column is-4">
+          <p class="footer-heading">Connect</p>
+          <div class="footer-social">
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:jp@shanda.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Shanda AI Research Tokyo. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Language Toggle ===== -->
+  <script>
+    (function () {
+      function getLang() {
+        var stored = localStorage.getItem('career-lang');
+        return stored === 'zh' ? 'zh' : 'en';
+      }
+      function applyLang(lang) {
+        var root = document.documentElement;
+        root.classList.remove('lang-en', 'lang-zh');
+        root.classList.add('lang-' + lang);
+        root.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+        document.querySelectorAll('.lang-toggle button').forEach(function (b) {
+          b.classList.toggle('is-active', b.dataset.lang === lang);
+        });
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        var current = getLang();
+        applyLang(current);
+        document.querySelectorAll('.lang-toggle button').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var lang = btn.dataset.lang;
+            localStorage.setItem('career-lang', lang);
+            applyLang(lang);
+          });
+        });
+      });
+    })();
+  </script>
+
+</body>
+
+</html>
