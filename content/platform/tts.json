@@ -11,24 +11,24 @@
     "headline": "Voices that<br><span class=\"gradient-headline\">feel alive</span><br>— expressive Japanese speech.",
     "description": "Precise control over tone, pitch, and emotional nuance for digital characters. Natural-sounding Japanese with rich prosody and emotion.",
     "buttonText": "Try now!",
-    "buttonLink": "research.html",
+    "buttonLink": "https://kodama-tts.amadeusu.com/",
     "background": {
       "type": "audio-samples",
       "samples": [
         {
-          "text": "バッカじゃないの？！君はどうなろうと、私の知ったことじゃないから、どっかに消えて。",
-          "emotion": "Angry",
-          "audio": "static/audio/sample-angry.mp3"
+          "text": "す、水神さまを客観的に評価するなんて、ぼ、ぼくには無理だから。うん…この話題はやめよう。それに、ぼくはあの方とあまり関わったことないし…見方も偏っちゃうと思う。",
+          "emotion": "Hesitated",
+          "audio": "static/audio/audio_1.wav"
         },
         {
-          "text": "あの日のことを思い出すと、胸が痛くなります…",
-          "emotion": "Sad",
-          "audio": "static/audio/sample-angry.mp3"
+          "text": "ふふっ…バレた？ うん、ずっと隠してたの。えへへ。",
+          "emotion": "Laugh",
+          "audio": "static/audio/audio_2.wav"
         },
-	{
-          "text": "今日はとても良い天気ですね！一緒に散歩しましょう。",
-          "emotion": "Happy",
-          "audio": "static/audio/sample-angry.mp3"
+        {
+          "text": "……ひっく……うぅ……ごめんね……ごめん……",
+          "emotion": "Cry",
+          "audio": "static/audio/audio_3.wav"
         }
       ]
     }

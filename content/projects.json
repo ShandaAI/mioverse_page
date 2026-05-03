@@ -47,7 +47,7 @@
     "image": "static/images/kodama-tts.jpg",
     "video": "",
     "links": [
-      { "label": "Demo", "url": "https://kodama.amadeusu.com/", "icon": "fas fa-play" }
+      { "label": "Demo", "url": "https://kodama-tts.amadeusu.com/", "icon": "fas fa-play" }
     ],
     "placeholderIcon": "fas fa-microphone-alt"
   },
