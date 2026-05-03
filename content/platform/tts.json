@@ -29,6 +29,11 @@
           "text": "……ひっく……うぅ……ごめんね……ごめん……",
           "emotion": "Cry",
           "audio": "static/audio/audio_3.wav"
+        },
+        {
+          "text": "バッカじゃないの？！君はどうなろうと、私の知ったことじゃないから、どっかに消えて。",
+          "emotion": "Angry",
+          "audio": "static/audio/sample-angry.mp3"
         }
       ]
     }
